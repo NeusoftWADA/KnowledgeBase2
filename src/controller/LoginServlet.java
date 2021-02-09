@@ -26,9 +26,10 @@ public class LoginServlet extends HttpServlet {
             if (loginResult == 1) {
                 HttpSession session = request.getSession();
                 session.setAttribute("aid",id);
-                response.sendRedirect("/myweb/adminindex.jsp");
+                response.sendRedirect("/myweb/SignInPage.jsp");
             } else {
-                response.sendRedirect("/myweb/login_error.html");
+                request.setAttribute("loginResult",loginResult);
+                request.getRequestDispatcher("/SignInPage.jsp").forward(request,response);
             }
         }else{
             loginResult = dao.loginUser(id,upassword);
@@ -38,7 +39,7 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("/myweb/HomePage.jsp");
             } else {
                 request.setAttribute("loginResult",loginResult);
-                request.getRequestDispatcher("/HomePage.jsp").forward(request,response);
+                request.getRequestDispatcher("/SignInPage.jsp").forward(request,response);
             }
         }
 
