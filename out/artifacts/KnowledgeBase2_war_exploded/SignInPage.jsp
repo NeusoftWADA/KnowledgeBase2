@@ -76,10 +76,10 @@
         <%
             if (flag == 0&&loginResult==0){
         %>
-<%--            <!-- 登录错误提示 (矩形) -->
-            <div id="u41" class="ax_default label" data-label="登录错误提示">
-                <div id="u41_div" class=""></div>
-                <div id="u41_text" class="text ">
+<%--           <!-- 登录错误提示 (矩形) -->
+            <div id="u307" class="ax_default label" data-label="登录错误提示">
+                <div id="u307_div" class=""></div>
+                <div id="u307_text" class="text ">
                     <p><span>*用户名密码有误，请仔细核对后再登录</span></p>
                 </div>
             </div>--%>
@@ -112,9 +112,9 @@
     </div>
 
     <!-- 登录错误提示 (矩形) -->
-    <div id="u41" class="ax_default label" data-label="登录错误提示">
-        <div id="u41_div" class=""></div>
-        <div id="u41_text" class="text ">
+    <div id="u307" class="ax_default label" data-label="登录错误提示">
+        <div id="u307_div" class=""></div>
+        <div id="u307_text" class="text ">
             <p><span>*用户名密码有误，请仔细核对后再登录</span></p>
         </div>
     </div>
