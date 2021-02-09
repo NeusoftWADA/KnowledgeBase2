@@ -12,12 +12,14 @@ import java.util.List;
 
 public class UserAddServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         {
+
             String id, upassword, password;
             UserDao dao = new UserDao();
             int result = 0;
 
+            request.setCharacterEncoding("utf-8");
             id = request.getParameter("id");
             upassword = request.getParameter("upassword");
             password = request.getParameter("password");
@@ -47,14 +49,8 @@ public class UserAddServlet extends HttpServlet {
                 result = dao.add(user);
             }
 
-            if (result==1){
-                response.sendRedirect("/myweb/user_Add_Success.jsp");
-            }else{
-                request.setAttribute("result",result);
-                request.getRequestDispatcher("/user_Add_False.jsp").forward(request,response);
-            }
-
-
+            request.setAttribute("result",result);
+            request.getRequestDispatcher("/RegisterPage.jsp").forward(request,response);
 
         }
 

@@ -6,11 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
-    Integer loginResult =  (Integer)request.getAttribute("loginResult");
+    Integer loginResult = (Integer) request.getAttribute("loginResult");
     int flag = 0;
-    if (loginResult==null){
+    if (loginResult == null) {
         flag = -1;
     }
 %>
@@ -64,32 +64,32 @@
     <form action="/myweb/login" method="post">
         <!-- 登录账户名 (文本框) -->
         <div id="u302" class="ax_default text_field" data-label="登录账户名">
-            <input id="u302_input" type="text"  name="id"/>
+            <input id="u302_input" type="text" name="id"/>
         </div>
 
         <!-- 登录密码 (文本框) -->
         <div id="u303" class="ax_default text_field" data-label="登录密码">
-            <input id="u303_input" type="password"  name="upassword"/>
+            <input id="u303_input" type="password" name="upassword"/>
         </div>
 
-       <%--判断用户名密码是否正确--%>
+        <%--判断用户名密码是否正确--%>
         <%
-            if (flag == 0&&loginResult==0){
+            if (flag == 0 && loginResult == 0) {
         %>
-<%--           <!-- 登录错误提示 (矩形) -->
-            <div id="u307" class="ax_default label" data-label="登录错误提示">
-                <div id="u307_div" class=""></div>
-                <div id="u307_text" class="text ">
-                    <p><span>*用户名密码有误，请仔细核对后再登录</span></p>
-                </div>
-            </div>--%>
+        <!-- 登录错误提示 (矩形) -->
+        <div id="u307" class="ax_default label" data-label="登录错误提示">
+            <div id="u307_div" class=""></div>
+            <div id="u307_text" class="text ">
+                <p><span>*用户名密码有误，请仔细核对后再登录</span></p>
+            </div>
+        </div>
         <%
             }
         %>
 
         <!-- 登录按钮 (矩形) -->
         <div id="u304" class="ax_default primary_button" data-label="登录按钮">
-            <input type="submit" id="u304_div"  class="" value="登录" style=" color:#FFFFFF; ">
+            <input type="submit" id="u304_div" class="" value="登录" style=" color:#FFFFFF; ">
         </div>
 
     </form>
@@ -110,15 +110,6 @@
             <p><span>请输入密码</span></p>
         </div>
     </div>
-
-    <!-- 登录错误提示 (矩形) -->
-    <div id="u307" class="ax_default label" data-label="登录错误提示">
-        <div id="u307_div" class=""></div>
-        <div id="u307_text" class="text ">
-            <p><span>*用户名密码有误，请仔细核对后再登录</span></p>
-        </div>
-    </div>
-
 
 
 </div>
