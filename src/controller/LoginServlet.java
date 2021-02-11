@@ -36,7 +36,8 @@ public class LoginServlet extends HttpServlet {
             if (loginResult == 1) {
                 HttpSession session = request.getSession();
                 session.setAttribute("uid",id);
-                response.sendRedirect("/myweb/HomePage.jsp");
+//                response.sendRedirect("/myweb/PersonalPage.jsp");
+                request.getRequestDispatcher("/show/knowledge").forward(request,response);
             } else {
                 request.setAttribute("loginResult",loginResult);
                 request.getRequestDispatcher("/SignInPage.jsp").forward(request,response);

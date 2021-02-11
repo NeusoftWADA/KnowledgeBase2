@@ -1,11 +1,17 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="entity.Knowledge" %><%--
   Created by IntelliJ IDEA.
   User: 齑粉玥
   Date: 2021/2/5
   Time: 19:46
   To change this template use File | Settings | File Templates.
 --%>
+
+<%--293行暂时注销--%>
+
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>个人页</title>
@@ -55,7 +61,7 @@
     <div id="u100" class="ax_default label" data-label="用户账号2">
         <div id="u100_div" class=""></div>
         <div id="u100_text" class="text ">
-            <p><span style="color:#FFFFFF;">13304099942</span><span> </span></p>
+            <p><span style="color:#FFFFFF;">${sessionScope.uid}</span><span> </span></p>
         </div>
     </div>
 
@@ -67,29 +73,122 @@
         </div>
     </div>
 
-    <!-- Unnamed (矩形) -->
-    <div id="u102" class="ax_default box_3">
-        <div id="u102_div" class=""></div>
-        <div id="u102_text" class="text ">
-            <p><span>10</span></p>
-        </div>
-    </div>
+    <%
+        List<Knowledge> knoList = (List)request.getAttribute("knowledges");
 
-    <!-- Unnamed (矩形) -->
-    <div id="u103" class="ax_default box_3">
-        <div id="u103_div" class=""></div>
-        <div id="u103_text" class="text ">
-            <p><span>3</span></p>
+        for (int i = 0; i < knoList.size(); i++) {
+            if (i==0){
+    %>
+        <!-- Unnamed (矩形) -->
+        <div id="u107" class="ax_default box_3">
+            <div id="u107_div" class=""></div>
+            <div id="u107_text" class="text ">
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; 1、<%=knoList.get(i).getTitle()%></a> </span></p>
+            </div>
         </div>
-    </div>
+    <%
+            }else if (i==1){
+    %>
+        <!-- Unnamed (矩形) -->
+        <div id="u108" class="ax_default box_3">
+            <div id="u108_div" class=""></div>
+            <div id="u108_text" class="text ">
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;2、 <%=knoList.get(i).getTitle()%></a> </span></p>
+            </div>
+        </div>
+    <%
+            }else if (i==2){
+    %>
+        <!-- Unnamed (矩形) -->
+        <div id="u103" class="ax_default box_3">
+            <div id="u103_div" class=""></div>
+            <div id="u103_text" class="text ">
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;3、 <%=knoList.get(i).getTitle()%></a> </span></p>
+            </div>
+        </div>
+    <%
+            }else if (i==3){
+    %>
+        <!-- Unnamed (矩形) -->
+        <div id="u112" class="ax_default box_3">
+            <div id="u112_div" class=""></div>
+            <div id="u112_text" class="text ">
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;4、 <%=knoList.get(i).getTitle()%></a> </span></p>
+            </div>
+        </div>
+    <%
+            }else if (i==4){
+    %>
+        <!-- Unnamed (矩形) -->
+        <div id="u104" class="ax_default box_3">
+            <div id="u104_div" class=""></div>
+            <div id="u104_text" class="text ">
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;5、 <%=knoList.get(i).getTitle()%></a> </span></p>
+            </div>
+        </div>--%>
+    <%
+            }else if (i==5){
+    %>
+        <!-- Unnamed (矩形) -->
+        <div id="u109" class="ax_default box_3">
+            <div id="u109_div" class=""></div>
+            <div id="u109_text" class="text ">
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;6、 <%=knoList.get(i).getTitle()%></a> </span></p>
+            </div>
+        </div>
+    <%
+            }else if (i==6){
+    %>
+        <!-- Unnamed (矩形) -->
+        <div id="u110" class="ax_default box_3">
+            <div id="u110_div" class=""></div>
+            <div id="u110_text" class="text ">
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;7、 <%=knoList.get(i).getTitle()%></a> </span></p>
+            </div>
+        </div>
+    <%
+            }else if (i==7){
+    %>
+        <!-- Unnamed (矩形) -->
+        <div id="u113" class="ax_default box_3">
+            <div id="u113_div" class=""></div>
+            <div id="u113_text" class="text ">
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;8、 <%=knoList.get(i).getTitle()%></a> </span></p>
+            </div>
+        </div>
+    <%
+            }else if (i==8){
+    %>
 
-    <!-- Unnamed (矩形) -->
-    <div id="u104" class="ax_default box_3">
-        <div id="u104_div" class=""></div>
-        <div id="u104_text" class="text ">
-            <p><span>5</span></p>
+        <!-- Unnamed (矩形) -->
+        <div id="u111" class="ax_default box_3">
+            <div id="u111_div" class=""></div>
+            <div id="u111_text" class="text ">
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;9、 <%=knoList.get(i).getTitle()%></a> </span></p>
+            </div>
         </div>
-    </div>
+    <%
+            }else if (i==9){
+    %>
+        <!-- Unnamed (矩形) -->
+        <div id="u102" class="ax_default box_3">
+            <div id="u102_div" class=""></div>
+            <div id="u102_text" class="text ">
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;10、 <%=knoList.get(i).getTitle()%></a> </span></p>
+            </div>
+        </div>
+
+    <%
+            }
+        }
+    %>
+
+
+
+
+
+
+
 
     <!-- 性别 (矩形) -->
     <div id="u105" class="ax_default label" data-label="性别">
@@ -107,61 +206,20 @@
         </div>
     </div>
 
-    <!-- Unnamed (矩形) -->
-    <div id="u107" class="ax_default box_3">
-        <div id="u107_div" class=""></div>
-        <div id="u107_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; 数据库基础知识汇总（一）</span></p>
-        </div>
-    </div>
 
-    <!-- Unnamed (矩形) -->
-    <div id="u108" class="ax_default box_3">
-        <div id="u108_div" class=""></div>
-        <div id="u108_text" class="text ">
-            <p><span>2</span></p>
-        </div>
-    </div>
 
-    <!-- Unnamed (矩形) -->
-    <div id="u109" class="ax_default box_3">
-        <div id="u109_div" class=""></div>
-        <div id="u109_text" class="text ">
-            <p><span>6</span></p>
-        </div>
-    </div>
 
-    <!-- Unnamed (矩形) -->
-    <div id="u110" class="ax_default box_3">
-        <div id="u110_div" class=""></div>
-        <div id="u110_text" class="text ">
-            <p><span>7</span></p>
-        </div>
-    </div>
 
-    <!-- Unnamed (矩形) -->
-    <div id="u111" class="ax_default box_3">
-        <div id="u111_div" class=""></div>
-        <div id="u111_text" class="text ">
-            <p><span>9</span></p>
-        </div>
-    </div>
 
-    <!-- Unnamed (矩形) -->
-    <div id="u112" class="ax_default box_3">
-        <div id="u112_div" class=""></div>
-        <div id="u112_text" class="text ">
-            <p><span>4</span></p>
-        </div>
-    </div>
 
-    <!-- Unnamed (矩形) -->
-    <div id="u113" class="ax_default box_3">
-        <div id="u113_div" class=""></div>
-        <div id="u113_text" class="text ">
-            <p><span>8</span></p>
-        </div>
-    </div>
+
+
+
+
+
+
+
+
 
     <!-- 删除知识点按钮 (图片) -->
     <div id="u114" class="ax_default _图片" data-label="删除知识点按钮">
@@ -290,7 +348,7 @@
         </div>
     </div>
 
-    <!-- 删除成功 (组 合) -->
+<%--    <!-- 删除成功 (组 合) -->
     <div id="u135" class="ax_default" data-label="录入成功" data-left="-223" data-top="0" data-width="2721" data-height="1488">
 
         <!-- 遮蔽 (矩形) -->
@@ -311,7 +369,7 @@
             <img id="u138_img" class="img " src="images/主页/u57.png"/>
         </div>
 
-    </div>
+    </div>--%>
 </div>
 </body>
 </html>

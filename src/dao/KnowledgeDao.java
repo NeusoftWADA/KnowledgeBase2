@@ -4,10 +4,75 @@ import entity.Knowledge;
 import util.JdbcUtil;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class KnowledgeDao {
     private JdbcUtil util = new JdbcUtil();
+
+    //取出所有知识点
+    public List<Knowledge> knowledges_fetch(Integer uid){
+        String sql = "select * from knowledge where uid = ?";
+        String title,content;
+        Integer  kid,attention,share,tid,wid;
+        ResultSet rs = null;
+        List<Knowledge> list = new ArrayList<>();
+        PreparedStatement ps = util.createStatement(sql);
+        try {
+            ps.setInt(1,uid);
+            rs = ps.executeQuery();
+            while (rs.next()){
+                kid = rs.getInt("kid");
+                title = rs.getString("title");
+                content = rs.getString("content");
+                attention  = rs.getInt("attention");
+                share = rs.getInt("share");
+                tid = rs.getInt("tid");
+                wid = rs.getInt("wid");
+                Knowledge knowledge = new Knowledge(kid,title,content,attention,share,tid,wid,uid);
+                list.add(knowledge);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            util.close(rs);
+        }
+        return list;
+    }
+
+    //取出标题对应的知识点
+    public Knowledge knowledge_find(String title){
+        String sql = "select * from knowledge where title = ?";
+        String content;
+        Integer  kid,attention,share,tid,wid,uid;
+        ResultSet rs = null;
+        PreparedStatement ps = util.createStatement(sql);
+        Knowledge knowledge = null;
+        try {
+            ps.setString(1,title);
+            rs = ps.executeQuery();
+            while (rs.next()){
+                kid = rs.getInt("kid");
+                title = rs.getString("title");
+                content = rs.getString("content");
+                attention  = rs.getInt("attention");
+                share = rs.getInt("share");
+                tid = rs.getInt("tid");
+                wid = rs.getInt("wid");
+                uid = rs.getInt("uid");
+                knowledge = new Knowledge(kid,title,content,attention,share,tid,wid,uid);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            util.close(rs);
+        }
+        return knowledge;
+    }
+
+
 
     //知识点录入
     public int Knowledge_insert(Knowledge knowledge){

@@ -17,7 +17,23 @@
         <servlet-name>MakeKnowledgeServlet</servlet-name>
         <servlet-class>controller.KnowledgeMakeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ShowKnowledgeServlet</servlet-name>
+        <servlet-class>controller.ShowKnowledgeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>KnowledgeShowContextServlet</servlet-name>
+        <servlet-class>controller.KnowledgeShowContextServlet</servlet-class>
+    </servlet>
 
+    <servlet-mapping>
+        <servlet-name>KnowledgeShowContextServlet</servlet-name>
+        <url-pattern>/show/Knowledge/Context</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowKnowledgeServlet</servlet-name>
+        <url-pattern>/show/knowledge</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>MakeKnowledgeServlet</servlet-name>
         <url-pattern>/knowledge/add</url-pattern>

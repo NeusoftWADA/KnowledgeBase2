@@ -1,4 +1,5 @@
-<%--
+<%@ page import="entity.Knowledge" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: 齑粉玥
   Date: 2021/2/5
@@ -17,6 +18,9 @@
     <link href="data/styles.css" type="text/css" rel="stylesheet"/>
     <link href="files/知识点页/styles.css" type="text/css" rel="stylesheet"/>
 </head>
+<%
+    Knowledge knowledge =(Knowledge) request.getAttribute("knowledge");
+%>
 <body>
 <div id="base" class="">
 
@@ -33,13 +37,19 @@
     <div id="u309" class="ax_default _一级标题" data-label="标题">
         <div id="u309_div" class=""></div>
         <div id="u309_text" class="text ">
-            <p><span>数据库基础知识汇总（一）</span></p>
+            <p><span> <%=knowledge.getTitle()%></span></p>
         </div>
     </div>
 
     <!-- 内容 (多行文本框) -->
     <div id="u310" class="ax_default text_area" data-label="内容">
-        <textarea id="u310_input">五个基本的关系代数操作
+        <textarea id="u310_input">
+
+            <%=knowledge.getContent()%>
+
+
+
+            <%--五个基本的关系代数操作
 &nbsp; &nbsp; 并、差、笛卡尔积、选择、投影
 数据库语言四大类
 &nbsp; &nbsp; DQL（Data Query Language）：数据库查询语言。
@@ -129,7 +139,9 @@ where 条件
 例：属性别名
 select name as instructor_name,salary
 from instructor2
-where salary&gt;3500;</textarea>
+where salary&gt;3500;--%>
+
+        </textarea>
     </div>
 
     <!-- 关键词 (矩形) -->
