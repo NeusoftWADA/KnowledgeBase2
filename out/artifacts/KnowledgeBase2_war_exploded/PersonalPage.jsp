@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="entity.Knowledge" %><%--
+<%@ page import="entity.Knowledge" %>
+<%@ page import="entity.User_detail" %><%--
   Created by IntelliJ IDEA.
   User: 齑粉玥
   Date: 2021/2/5
@@ -7,9 +8,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<%--293行暂时注销--%>
+<%--删除成功暂时注销--%>
 
-
+<%
+    User_detail user_detail =(User_detail) request.getAttribute("user_detail");
+%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
@@ -39,13 +42,6 @@
         </div>
     </div>
 
-    <!-- 爱好 (矩形) -->
-    <div id="u97" class="ax_default label" data-label="爱好">
-        <div id="u97_div" class=""></div>
-        <div id="u97_text" class="text ">
-            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 爱&nbsp;&nbsp; 好 ：</span></p><p><span><br></span></p>
-        </div>
-    </div>
 
     <!-- 录入底框 (矩形) -->
     <div id="u98" class="ax_default box_2" data-label="录入底框">
@@ -65,13 +61,46 @@
         </div>
     </div>
 
+    <!-- 个性签名 (矩形) -->
+    <div id="u106" class="ax_default _文本段落" data-label="个性签名">
+        <div id="u106_div" class=""></div>
+        <div id="u106_text" class="text ">
+            <p><span style="color:#FFFFFF;">个性签名：<%=user_detail.getTitle()%></span></p><p><span><br></span></p><p><span><br></span></p>
+        </div>
+    </div>
+
+    <!-- 爱好 (矩形) -->
+    <div id="u97" class="ax_default label" data-label="爱好">
+        <div id="u97_div" class=""></div>
+        <div id="u97_text" class="text ">
+            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 爱&nbsp;&nbsp; 好 ：<%=user_detail.getContent()%></span></p><p><span><br></span></p>
+        </div>
+    </div>
+
+    <!-- 性别 (矩形) -->
+    <div id="u105" class="ax_default label" data-label="性别">
+        <div id="u105_div" class=""></div>
+        <div id="u105_text" class="text ">
+            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 性&nbsp;&nbsp; 别 ：<%=user_detail.getSex()%></span></p><p><span><br></span></p>
+        </div>
+    </div>
+
     <!-- 学校 (矩形) -->
     <div id="u101" class="ax_default label" data-label="学校">
         <div id="u101_div" class=""></div>
         <div id="u101_text" class="text ">
-            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 学&nbsp;&nbsp; 校：</span></p><p><span><br></span></p>
+            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 学&nbsp;&nbsp; 校：<%=user_detail.getSchool()%></span></p><p><span><br></span></p>
         </div>
     </div>
+
+    <!-- 专业 (矩形) -->
+    <div id="u124" class="ax_default label" data-label="专业">
+        <div id="u124_div" class=""></div>
+        <div id="u124_text" class="text ">
+            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 专&nbsp;&nbsp; 业：<%=user_detail.getProfession()%></span></p><p><span><br></span></p>
+        </div>
+    </div>
+
 
     <%
         List<Knowledge> knoList = (List)request.getAttribute("knowledges");
@@ -187,40 +216,6 @@
 
 
 
-
-
-
-    <!-- 性别 (矩形) -->
-    <div id="u105" class="ax_default label" data-label="性别">
-        <div id="u105_div" class=""></div>
-        <div id="u105_text" class="text ">
-            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 性&nbsp;&nbsp; 别 ：男</span></p><p><span><br></span></p>
-        </div>
-    </div>
-
-    <!-- 个性签名 (矩形) -->
-    <div id="u106" class="ax_default _文本段落" data-label="个性签名">
-        <div id="u106_div" class=""></div>
-        <div id="u106_text" class="text ">
-            <p><span style="color:#FFFFFF;">个性签名：YEAH</span></p><p><span><br></span></p><p><span><br></span></p>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- 删除知识点按钮 (图片) -->
     <div id="u114" class="ax_default _图片" data-label="删除知识点按钮">
         <img id="u114_img" class="img " src="images/个人页/删除知识点按钮_u114.png"/>
@@ -290,13 +285,7 @@
         </div>
     </div>
 
-    <!-- 专业 (矩形) -->
-    <div id="u124" class="ax_default label" data-label="专业">
-        <div id="u124_div" class=""></div>
-        <div id="u124_text" class="text ">
-            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 专&nbsp;&nbsp; 业：软件工程</span></p><p><span><br></span></p>
-        </div>
-    </div>
+
 
     <!-- 个人信息按钮 (热区) -->
     <div id="u125" class="ax_default" onclick="javascript:window.location.href='PersonalInformation.jsp';" data-label="个人信息按钮">
