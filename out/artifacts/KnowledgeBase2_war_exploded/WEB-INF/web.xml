@@ -29,7 +29,16 @@
         <servlet-name>KnowledgeInputServlet</servlet-name>
         <servlet-class>controller.KnowledgeInputServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>User_detailUpdateServlet</servlet-name>
+        <servlet-class>controller.User_detailUpdateServlet</servlet-class>
+    </servlet>
 
+
+    <servlet-mapping>
+        <servlet-name>User_detailUpdateServlet</servlet-name>
+        <url-pattern>/detail/update</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>KnowledgeInputServlet</servlet-name>
         <url-pattern>/knowledge/input</url-pattern>

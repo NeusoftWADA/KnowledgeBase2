@@ -31,7 +31,7 @@ public class ShowKnowledgeServlet extends HttpServlet {
         //取出用户的详细信心
         User_detail user_detail = user_detailDao.User_detail_find(uid);
 
-        request.setAttribute("user_detail",user_detail);
+        session.setAttribute("user_detail",user_detail);
         request.setAttribute("knowledges",knowledges);
         request.getRequestDispatcher("/PersonalPage.jsp").forward(request,response);
     }

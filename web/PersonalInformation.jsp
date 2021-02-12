@@ -1,4 +1,4 @@
-<%--
+<%@ page import="entity.User_detail" %><%--
   Created by IntelliJ IDEA.
   User: 齑粉玥
   Date: 2021/2/5
@@ -6,6 +6,17 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%--判断第几次跳转到此页面
+第一次flag为-1，否则为0
+--%>
+<%
+    Integer res = (Integer) request.getAttribute("res");
+    int flag = 0;
+    if (res == null) {
+        flag = -1;
+    }
+%>
 <html>
 <head>
     <title>个人信息页</title>
@@ -127,34 +138,35 @@
     </div>
 
 
-    <form action="/myweb/detail/add" method="get">
+    <form action="/myweb/detail/update" method="get">
 
     <!-- 个性签名2 (文本框) -->
     <div id="u141" class="ax_default text_field" data-label="个性签名2">
-        <input id="u141_input" type="text" value="YEAH"/>
+        <input id="u141_input" type="text" name="title" value="${sessionScope.user_detail.title}"/>
     </div>
 
     <!-- 爱好2 (文本框) -->
     <div id="u143" class="ax_default text_field" data-label="爱好2">
-        <input id="u143_input" type="text" value=""/>
+        <input id="u143_input" type="text" name="content" value="${sessionScope.user_detail.content}"/>
     </div>
 
     <!-- 性别2 (下拉列表框) -->
     <div id="u145" class="ax_default droplist" data-label="性别2">
-        <select id="u145_input">
-            <option value="男">男</option>
-            <option value="女">女</option>
+        <select id="u145_input" name="sex">
+            <option value=""></option>
+            <option value="男"  ${"男" eq sessionScope.user_detail.sex ?"selected":""}> 男</option>
+            <option value="女"  ${"女" eq sessionScope.user_detail.sex ?"selected":""}>女</option>
         </select>
     </div>
 
     <!-- 学校2 (文本框) -->
     <div id="u147" class="ax_default text_field" data-label="学校2">
-        <input id="u147_input" type="text" value=""/>
+        <input id="u147_input" type="text" name="school" value="${sessionScope.user_detail.school}"/>
     </div>
 
     <!-- 专业2 (文本框) -->
     <div id="u158" class="ax_default text_field" data-label="专业2">
-        <input id="u158_input" type="text" value="软件工程"/>
+        <input id="u158_input" type="text"  name="profession" value="${sessionScope.user_detail.profession}"/>
     </div>
 
     <!-- 确认按钮 (矩形) -->
@@ -175,7 +187,12 @@
         </div>
     </div>
 
-<%--    <!-- 修改成功 (组 合) -->
+
+    <%--判断是否注册成功--%>
+    <%
+        if (flag == 0 && res == 1) {
+    %>
+    <!-- 修改成功 (组 合) -->
     <div id="u162" class="ax_default" data-label="修改成功" data-left="-97" data-top="0" data-width="1813" data-height="899">
 
         <!-- 遮蔽2 (矩形) -->
@@ -187,7 +204,7 @@
         <div id="u164" class="ax_default box_3" data-label="成功提示">
             <div id="u164_div" class=""></div>
             <div id="u164_text" class="text ">
-                <p><span>已成功修改&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span></p><p><span>请点击返回个人页&nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+                <p><span>已成功修改&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span></p><p><span><a href="/myweb/show/knowledge">请点击返回个人页&nbsp; &nbsp; &nbsp; &nbsp;</a>  </span></p>
             </div>
         </div>
 
@@ -199,7 +216,11 @@
         <!-- 返回热区 (热区) -->
         <div id="u166" class="ax_default" onclick="javascript:window.location.href='PersonalPage.jsp';" data-label="返回热区">
         </div>
-    </div>--%>
+    </div>
+    <%
+        }
+    %>
+
 </div>
 </body>
 </html>

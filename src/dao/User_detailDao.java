@@ -38,4 +38,24 @@ public class User_detailDao {
         }
         return user_detail;
     }
+
+    //更新用户的详细信息
+    public int User_detail_update(String title, String content, String sex, String school, String profession, Integer uid){
+        String sql = "update user_detail set title=?,content=?,sex=?,school=?,profession=? where uid =?";
+        PreparedStatement ps = util.createStatement(sql);
+        User_detail user_detail = null;
+        int result = 0;
+        try {
+            ps.setString(1,title);
+            ps.setString(2,content);
+            ps.setString(3,sex);
+            ps.setString(4,school);
+            ps.setString(5,profession);
+            ps.setInt(6,uid);
+            result = ps.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return result;
+    }
 }
