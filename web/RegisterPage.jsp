@@ -6,6 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%--判断第几次跳转到此页面
+第一次flag为-1，否则为0
+--%>
 <%
     Integer result = (Integer) request.getAttribute("result");
     int flag = 0;
@@ -67,6 +71,9 @@
         <div id="u315_div" class=""></div>
     </div>
 
+
+
+
     <form action="/myweb/user/Add" method="post">
 
         <!-- 注册账号 (文本框) -->
@@ -74,60 +81,20 @@
             <input id="u317_input" type="text" name="id"/>
         </div>
 
-        <%-- //判断账号是否存在--%>
-        <%
-            if (flag == 0 && result == -1) {
-        %>
-        <!-- 注册错误提示1 (矩形) -->
-        <div id="u322" class="ax_default label" data-label="注册错误提示1">
-            <div id="u322_div" class=""></div>
-            <div id="u322_text" class="text ">
-                <p><span>*该账户已被注册</span></p>
-            </div>
-        </div>
-        <%
-            }
-        %>
 
 
         <!-- 注册密码 (文本框) -->
         <div id="u318" class="ax_default text_field" data-label="注册密码">
             <input id="u318_input" type="password" name="upassword"/>
         </div>
-        <%--判断密码是否小于6位数--%>
-        <%
-            if (flag == 0 && result == -3) {
-        %>
-        <!-- 注册错误提示2 (矩形) -->
-        <div id="u323" class="ax_default label" data-label="注册错误提示2">
-            <div id="u323_div" class=""></div>
-            <div id="u323_text" class="text ">
-                <p><span>*密码长度不符合要求</span></p>
-            </div>
-        </div>
-        <%
-            }
-        %>
+
 
 
         <!-- 注册再次密码 (文本框) -->
         <div id="u316" class="ax_default text_field" data-label="注册再次密码">
             <input id="u316_input" type="password" name="password"/>
         </div>
-        <%--判断第二次密码是否正确--%>
-        <%
-            if (flag == 0 && result == -2) {
-        %>
-        <!-- 注册错误提示3 (矩形) -->
-        <div id="u324" class="ax_default label" data-label="注册错误提示3">
-            <div id="u324_div" class=""></div>
-            <div id="u324_text" class="text ">
-                <p><span>*第二次密码输入错误</span></p>
-            </div>
-        </div>
-        <%
-            }
-        %>
+
 
         <!-- 注册按钮 (矩形) -->
         <div id="u312" class="ax_default primary_button" data-label="注册按钮">
@@ -135,7 +102,55 @@
         </div>
     </form>
 
-    <%--判断是否注册成功--%>
+
+
+    <%-- //判断账号是否存在--%>
+    <%
+        if (flag == 0 && result == -1) {
+    %>
+    <!-- 注册错误提示1 (矩形) -->
+    <div id="u322" class="ax_default label" data-label="注册错误提示1">
+        <div id="u322_div" class=""></div>
+        <div id="u322_text" class="text ">
+            <p><span>*该账户已被注册</span></p>
+        </div>
+    </div>
+    <%
+        }
+    %>
+
+    <%--判断密码是否小于6位数--%>
+    <%
+        if (flag == 0 && result == -3) {
+    %>
+    <!-- 注册错误提示2 (矩形) -->
+    <div id="u323" class="ax_default label" data-label="注册错误提示2">
+        <div id="u323_div" class=""></div>
+        <div id="u323_text" class="text ">
+            <p><span>*密码长度不符合要求</span></p>
+        </div>
+    </div>
+    <%
+        }
+    %>
+
+    <%--判断第二次密码是否正确--%>
+    <%
+        if (flag == 0 && result == -2) {
+    %>
+    <!-- 注册错误提示3 (矩形) -->
+    <div id="u324" class="ax_default label" data-label="注册错误提示3">
+        <div id="u324_div" class=""></div>
+        <div id="u324_text" class="text ">
+            <p><span>*第二次密码输入错误</span></p>
+        </div>
+    </div>
+    <%
+        }
+    %>
+
+
+<%--判断是否注册成功--%>
     <%
         if (flag == 0 && result == 1) {
     %>

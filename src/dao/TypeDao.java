@@ -31,5 +31,25 @@ public class TypeDao {
         return  tid;
     }
 
+    //根据分类号找到分类名
+    public String findCname(Integer tid){
+        String sql = "select cname from type where tid = ?";
+        PreparedStatement ps = util.createStatement(sql);
+        String cname = null;
+        ResultSet rs = null;
+
+        try {
+            ps.setInt(1, tid);
+            rs = ps.executeQuery();
+            while (rs.next()){
+                cname = rs.getString("cname");
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            util.close(rs);
+        }
+        return cname;
+    }
 
 }

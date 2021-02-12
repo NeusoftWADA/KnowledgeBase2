@@ -6,6 +6,18 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%--判断第几次跳转到此页面
+第一次flag为-1，否则为0
+--%>
+<%
+  Integer result = (Integer) request.getAttribute("result");
+  int flag = 0;
+  if (result == null) {
+    flag = -1;
+  }
+%>
+
 <html>
   <head>
     <title>知识点录入页</title>
@@ -109,42 +121,44 @@
       <img id="u179_img" class="img " src="images/个人页/分类按钮_u115.png"/>
     </div>
 
-    <!-- 分类选择 (下拉列表框) -->
-    <div id="u180" class="ax_default droplist" data-label="分类选择" title="请选择分类">
-      <select id="u180_input" title="请选择分类">
-        <option value="—请选择类别—">—请选择类别—</option>
-        <option value="计算机">计算机</option>
-        <option value="数学">数学</option>
-        <option value="英语">英语</option>
-        <option value="物理">物理</option>
-      </select>
-    </div>
 
-    <!-- 内容输入 (多行文本框) -->
 
-    <form action="addNews.do" method="post" onsubmit="return save();">
-
-      <div>
-        <textarea id="u181" class="ax_default text_area" data-label="内容输入" name="content" style="width:100%;height:600px;border: 0 none;visibility:hidden;"></textarea>
-        <textarea id="u181_input" rows="" cols="" name="ncontent" id="schtmlnr" style="display:none;">请输入内容…</textarea>
+    <form action="/myweb/knowledge/input" method="get">
+      <!-- 标题输入 (文本框) -->
+      <div id="u182" class="ax_default text_field" data-label="标题输入">
+        <input id="u182_input" type="text" name="title" value="请输入标题…"/>
       </div>
+
+      <!-- 内容输入 (多行文本框) -->
+      <div onsubmit="return save();">
+        <div>
+          <textarea id="u181" class="ax_default text_area" data-label="内容输入" name="content" style="width:100%;height:600px;border: 0 none;visibility:hidden;"></textarea>
+          <textarea id="u181_input" rows="" cols="" name="content" id="schtmlnr" style="display:none;">请输入内容…</textarea>
+        </div>
+      </div>
+
+      <!-- 分类选择 (下拉列表框) -->
+      <div id="u180" class="ax_default droplist" data-label="分类选择" title="请选择分类">
+        <select id="u180_input" title="请选择分类" name="selectType">
+          <option value="—请选择类别—">—请选择类别—</option>
+          <option value="计算机类">计算机类</option>
+          <option value="高数">高数</option>
+          <option value="英语">英语</option>
+          <option value="物理">物理</option>
+        </select>
+      </div>
+
+      <%--此处缺少一个提交按钮--%>
 
     </form>
 
 
-    <!-- 标题输入 (文本框) -->
-    <div id="u182" class="ax_default text_field" data-label="标题输入">
-      <input id="u182_input" type="text" value="请输入标题…"/>
-    </div>
 
-    <!-- 登录错误提示 (矩形) -->
-    <div id="u183" class="ax_default label" data-label="登录错误提示">
-      <div id="u183_div" class=""></div>
-      <div id="u183_text" class="text ">
-        <p><span>*内容不得为空</span></p>
-      </div>
-    </div>
 
+
+    <%
+      if(result==-1&&flag!=-1){
+    %>
     <!-- 登录错误提示 (矩形) -->
     <div id="u184" class="ax_default label" data-label="登录错误提示">
       <div id="u184_div" class=""></div>
@@ -152,7 +166,28 @@
         <p><span>*请核对标题是否填写</span></p>
       </div>
     </div>
+    <%
+      }
+    %>
 
+    <%
+
+      if(result==-2&&flag!=-1){
+    %>
+    <!-- 登录错误提示 (矩形) -->
+    <div id="u183" class="ax_default label" data-label="登录错误提示">
+      <div id="u183_div" class=""></div>
+      <div id="u183_text" class="text ">
+        <p><span>*内容不得为空</span></p>
+      </div>
+    </div>
+    <%
+      }
+    %>
+
+    <%
+      if(result==-3&&flag!=-1){
+    %>
     <!-- 登录错误提示 (矩形) -->
     <div id="u185" class="ax_default label" data-label="登录错误提示">
       <div id="u185_div" class=""></div>
@@ -160,33 +195,42 @@
         <p><span>*请选择类别哦</span></p>
       </div>
     </div>
+    <%
+      }
+    %>
 
 
-    <!-- 录入成功 (组 合) -->
-    <div id="u186" class="ax_default" data-label="录入成功" data-left="-332" data-top="0" data-width="2722" data-height="1426">
+    <%
+      if(result==1&&flag!=-1){
+    %>
+      <!-- 录入成功 (组 合) -->
+      <div id="u186" class="ax_default" data-label="录入成功" data-left="-332" data-top="0" data-width="2722" data-height="1426">
 
-      <!-- 遮蔽2 (矩形) -->
-      <div id="u187" class="ax_default box_3" data-label="遮蔽2">
-        <div id="u187_div" class=""></div>
-      </div>
+        <!-- 遮蔽2 (矩形) -->
+        <div id="u187" class="ax_default box_3" data-label="遮蔽2">
+          <div id="u187_div" class=""></div>
+        </div>
 
-      <!-- Unnamed (矩形) -->
-      <div id="u188" class="ax_default box_3">
-        <div id="u188_div" class=""></div>
-        <div id="u188_text" class="text ">
-          <p><span>已成功录入&nbsp; &nbsp;&nbsp; </span></p><p><span>请点击返回&nbsp; &nbsp;&nbsp; </span></p>
+        <!-- Unnamed (矩形) -->
+        <div id="u188" class="ax_default box_3">
+          <div id="u188_div" class=""></div>
+          <div id="u188_text" class="text ">
+            <p><span> 已成功录入&nbsp; &nbsp;&nbsp; </span></p><p><span><a href="/myweb/show/knowledge">请点击返回&nbsp; &nbsp;&nbsp; </a></span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (图片) -->
+        <div id="u189" class="ax_default _图片">
+          <img id="u189_img" class="img " src="images/个人信息页/返回按钮_u165.png"/>
+        </div>
+
+        <!-- Unnamed (热区) -->
+        <div id="u190" class="ax_default">
         </div>
       </div>
-
-      <!-- Unnamed (图片) -->
-      <div id="u189" class="ax_default _图片">
-        <img id="u189_img" class="img " src="images/个人信息页/返回按钮_u165.png"/>
-      </div>
-
-      <!-- Unnamed (热区) -->
-      <div id="u190" class="ax_default">
-      </div>
-    </div>
+    <%
+      }
+    %>
 
   </div>
   </body>

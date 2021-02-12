@@ -25,7 +25,15 @@
         <servlet-name>KnowledgeShowContextServlet</servlet-name>
         <servlet-class>controller.KnowledgeShowContextServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>KnowledgeInputServlet</servlet-name>
+        <servlet-class>controller.KnowledgeInputServlet</servlet-class>
+    </servlet>
 
+    <servlet-mapping>
+        <servlet-name>KnowledgeInputServlet</servlet-name>
+        <url-pattern>/knowledge/input</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>KnowledgeShowContextServlet</servlet-name>
         <url-pattern>/show/Knowledge/Context</url-pattern>

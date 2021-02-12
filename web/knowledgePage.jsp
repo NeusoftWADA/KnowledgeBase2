@@ -20,6 +20,7 @@
 </head>
 <%
     Knowledge knowledge =(Knowledge) request.getAttribute("knowledge");
+    String cname = (String) request.getAttribute("cname");
 %>
 <body>
 <div id="base" class="">
@@ -156,7 +157,7 @@ where salary&gt;3500;--%>
     <div id="u312" class="ax_default _一级标题" data-label="分类2">
         <div id="u312_div" class=""></div>
         <div id="u312_text" class="text ">
-            <p><span>类别：计算机</span></p>
+            <p><span>类别：<%=cname%>></span></p>
         </div>
     </div>
 
@@ -169,7 +170,7 @@ where salary&gt;3500;--%>
     <div id="u314" class="ax_default _一级标题" data-label="关注2">
         <div id="u314_div" class=""></div>
         <div id="u314_text" class="text ">
-            <p><span>关注：856</span></p>
+            <p><span>关注：<%=knowledge.getAttention()%></span></p>
         </div>
     </div>
 

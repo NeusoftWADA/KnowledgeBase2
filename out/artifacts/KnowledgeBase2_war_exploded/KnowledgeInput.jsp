@@ -109,33 +109,10 @@
       <img id="u179_img" class="img " src="images/个人页/分类按钮_u115.png"/>
     </div>
 
-    <!-- 分类选择 (下拉列表框) -->
-    <div id="u180" class="ax_default droplist" data-label="分类选择" title="请选择分类">
-      <select id="u180_input" title="请选择分类">
-        <option value="—请选择类别—">—请选择类别—</option>
-        <option value="计算机">计算机</option>
-        <option value="数学">数学</option>
-        <option value="英语">英语</option>
-        <option value="物理">物理</option>
-      </select>
-    </div>
-
-    <!-- 内容输入 (多行文本框) -->
-
-    <form action="addNews.do" method="post" onsubmit="return save();">
-
-      <div>
-        <textarea id="u181" class="ax_default text_area" data-label="内容输入" name="content" style="width:100%;height:600px;border: 0 none;visibility:hidden;"></textarea>
-        <textarea id="u181_input" rows="" cols="" name="ncontent" id="schtmlnr" style="display:none;">请输入内容…</textarea>
-      </div>
-
-    </form>
 
 
-    <!-- 标题输入 (文本框) -->
-    <div id="u182" class="ax_default text_field" data-label="标题输入">
-      <input id="u182_input" type="text" value="请输入标题…"/>
-    </div>
+
+
 
     <!-- 登录错误提示 (矩形) -->
     <div id="u183" class="ax_default label" data-label="登录错误提示">
@@ -160,6 +137,36 @@
         <p><span>*请选择类别哦</span></p>
       </div>
     </div>
+
+    <form action="/myweb/knowledge/input" method="get">
+      <!-- 标题输入 (文本框) -->
+      <div id="u182" class="ax_default text_field" data-label="标题输入">
+        <input id="u182_input" type="text" value="请输入标题…"/>
+      </div>
+
+      <!-- 内容输入 (多行文本框) -->
+      <div onsubmit="return save();">
+        <div>
+          <textarea id="u181" class="ax_default text_area" data-label="内容输入" name="content" style="width:100%;height:600px;border: 0 none;visibility:hidden;"></textarea>
+          <textarea id="u181_input" rows="" cols="" name="ncontent" id="schtmlnr" style="display:none;">请输入内容…</textarea>
+        </div>
+      </div>
+
+      <!-- 分类选择 (下拉列表框) -->
+      <div id="u180" class="ax_default droplist" data-label="分类选择" title="请选择分类">
+        <select id="u180_input" title="请选择分类" name="selectType">
+          <option value="—请选择类别—">—请选择类别—</option>
+          <option value="计算机类">计算机类</option>
+          <option value="高数">高数</option>
+          <option value="英语">英语</option>
+          <option value="物理">物理</option>
+        </select>
+      </div>
+
+
+    </form>
+
+
 
 
     <!-- 录入成功 (组 合) -->
