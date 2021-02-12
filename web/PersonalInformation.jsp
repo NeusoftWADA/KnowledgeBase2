@@ -33,10 +33,6 @@
         </div>
     </div>
 
-    <!-- 个性签名2 (文本框) -->
-    <div id="u141" class="ax_default text_field" data-label="个性签名2">
-        <input id="u141_input" type="text" value="YEAH"/>
-    </div>
 
     <!-- 个性签名1 (矩形) -->
     <div id="u142" class="ax_default label" data-label="个性签名1">
@@ -46,10 +42,6 @@
         </div>
     </div>
 
-    <!-- 爱好2 (文本框) -->
-    <div id="u143" class="ax_default text_field" data-label="爱好2">
-        <input id="u143_input" type="text" value=""/>
-    </div>
 
     <!-- 爱好1 (矩形) -->
     <div id="u144" class="ax_default label" data-label="爱好1">
@@ -59,13 +51,7 @@
         </div>
     </div>
 
-    <!-- 性别2 (下拉列表框) -->
-    <div id="u145" class="ax_default droplist" data-label="性别2">
-        <select id="u145_input">
-            <option value="男">男</option>
-            <option value="女">女</option>
-        </select>
-    </div>
+
 
     <!-- 性别1 (矩形) -->
     <div id="u146" class="ax_default label" data-label="性别1">
@@ -75,10 +61,7 @@
         </div>
     </div>
 
-    <!-- 学校2 (文本框) -->
-    <div id="u147" class="ax_default text_field" data-label="学校2">
-        <input id="u147_input" type="text" value=""/>
-    </div>
+
 
     <!-- 导航 (组 合) -->
     <div id="u148" class="ax_default" data-label="导航" data-left="-124" data-top="0" data-width="1867" data-height="56">
@@ -134,10 +117,6 @@
         </div>
     </div>
 
-    <!-- 专业2 (文本框) -->
-    <div id="u158" class="ax_default text_field" data-label="专业2">
-        <input id="u158_input" type="text" value="软件工程"/>
-    </div>
 
     <!-- 专业1 (矩形) -->
     <div id="u159" class="ax_default label" data-label="专业1">
@@ -147,13 +126,46 @@
         </div>
     </div>
 
+
+    <form action="/myweb/detail/add" method="get">
+
+    <!-- 个性签名2 (文本框) -->
+    <div id="u141" class="ax_default text_field" data-label="个性签名2">
+        <input id="u141_input" type="text" value="YEAH"/>
+    </div>
+
+    <!-- 爱好2 (文本框) -->
+    <div id="u143" class="ax_default text_field" data-label="爱好2">
+        <input id="u143_input" type="text" value=""/>
+    </div>
+
+    <!-- 性别2 (下拉列表框) -->
+    <div id="u145" class="ax_default droplist" data-label="性别2">
+        <select id="u145_input">
+            <option value="男">男</option>
+            <option value="女">女</option>
+        </select>
+    </div>
+
+    <!-- 学校2 (文本框) -->
+    <div id="u147" class="ax_default text_field" data-label="学校2">
+        <input id="u147_input" type="text" value=""/>
+    </div>
+
+    <!-- 专业2 (文本框) -->
+    <div id="u158" class="ax_default text_field" data-label="专业2">
+        <input id="u158_input" type="text" value="软件工程"/>
+    </div>
+
     <!-- 确认按钮 (矩形) -->
     <div id="u160" class="ax_default primary_button" data-label="确认按钮">
         <div id="u160_div" class=""></div>
         <div id="u160_text" class="text ">
-            <p><span>确认修改</span></p>
+            <p><span>确认按钮</span></p>
         </div>
     </div>
+
+    </form>
 
     <!-- 取消按钮 (矩形) -->
     <div id="u161" class="ax_default primary_button" data-label="取消按钮">
@@ -163,7 +175,7 @@
         </div>
     </div>
 
-    <!-- 修改成功 (组 合) -->
+<%--    <!-- 修改成功 (组 合) -->
     <div id="u162" class="ax_default" data-label="修改成功" data-left="-97" data-top="0" data-width="1813" data-height="899">
 
         <!-- 遮蔽2 (矩形) -->
@@ -187,7 +199,7 @@
         <!-- 返回热区 (热区) -->
         <div id="u166" class="ax_default" onclick="javascript:window.location.href='PersonalPage.jsp';" data-label="返回热区">
         </div>
-    </div>
+    </div>--%>
 </div>
 </body>
 </html>
