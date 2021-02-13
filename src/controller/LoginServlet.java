@@ -16,12 +16,18 @@ public class LoginServlet extends HttpServlet {
         String id, upassword;
         UserDao dao = new UserDao();
         int loginResult = 0;
+        String admin = null;
         //1.调用请求对象对请求体使用utf-8字符集进行重新编译
         request.setCharacterEncoding("utf-8");
         //2.请求参数
         id = request.getParameter("id");
         upassword = request.getParameter("upassword");
-        if (id.substring(0,5).equals("admin")){
+        try{
+            admin = id.substring(0,5);
+        }catch (StringIndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        if ("admin".equals(admin)){
            loginResult = dao.loginAdmin(id,upassword);
             if (loginResult == 1) {
                 HttpSession session = request.getSession();
