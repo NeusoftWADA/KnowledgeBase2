@@ -11,7 +11,7 @@
 <%--删除成功暂时注销--%>
 
 <%
-    User_detail user_detail =(User_detail) request.getAttribute("user_detail");
+    User_detail user_detail =(User_detail) session.getAttribute("user_detail");
 %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>

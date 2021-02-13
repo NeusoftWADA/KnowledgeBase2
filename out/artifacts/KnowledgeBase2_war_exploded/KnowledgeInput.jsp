@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%--判断第几次跳转到此页面
 第一次flag为-1，否则为0
 --%>
@@ -157,7 +157,7 @@
 
 
     <%
-      if(result==-1&&flag!=-1){
+      if(flag == 0&&result == -1){
     %>
     <!-- 登录错误提示 (矩形) -->
     <div id="u184" class="ax_default label" data-label="登录错误提示">
@@ -172,7 +172,7 @@
 
     <%
 
-      if(result==-2&&flag!=-1){
+      if(flag == 0&&result == -2){
     %>
     <!-- 登录错误提示 (矩形) -->
     <div id="u183" class="ax_default label" data-label="登录错误提示">
@@ -186,7 +186,7 @@
     %>
 
     <%
-      if(result==-3&&flag!=-1){
+      if(flag == 0&&result == -3){
     %>
     <!-- 登录错误提示 (矩形) -->
     <div id="u185" class="ax_default label" data-label="登录错误提示">
@@ -201,7 +201,7 @@
 
 
     <%
-      if(result==1&&flag!=-1){
+      if(flag == 0&&result == 1){
     %>
       <!-- 录入成功 (组 合) -->
       <div id="u186" class="ax_default" data-label="录入成功" data-left="-332" data-top="0" data-width="2722" data-height="1426">
