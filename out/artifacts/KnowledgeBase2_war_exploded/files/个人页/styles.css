@@ -17,6 +17,9 @@
   position:absolute;
   z-index:0;
 }
+#a:link{
+  text-decoration:none
+}
 #u95_img {
   border-width:0px;
   position:absolute;

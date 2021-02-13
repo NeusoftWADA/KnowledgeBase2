@@ -62,41 +62,41 @@
     </div>
 
     <!-- 个性签名 (矩形) -->
-    <div id="u106" class="ax_default _文本段落" data-label="个性签名">
+    <div id="u106" class="ax_default _文本段落" data-label="个性签名" style="width: 500px;">
         <div id="u106_div" class=""></div>
-        <div id="u106_text" class="text ">
+        <div id="u106_text" class="text " style="width: 500px;">
             <p><span style="color:#FFFFFF;">个性签名：<%=user_detail.getTitle()%></span></p><p><span><br></span></p><p><span><br></span></p>
         </div>
     </div>
 
     <!-- 爱好 (矩形) -->
-    <div id="u97" class="ax_default label" data-label="爱好">
+    <div id="u97" class="ax_default label" data-label="爱好" style="width: 500px;">
         <div id="u97_div" class=""></div>
-        <div id="u97_text" class="text ">
+        <div id="u97_text" class="text " style="width: 500px;">
             <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 爱&nbsp;&nbsp; 好 ：<%=user_detail.getContent()%></span></p><p><span><br></span></p>
         </div>
     </div>
 
     <!-- 性别 (矩形) -->
-    <div id="u105" class="ax_default label" data-label="性别">
+    <div id="u105" class="ax_default label" data-label="性别" style="width: 500px;">
         <div id="u105_div" class=""></div>
-        <div id="u105_text" class="text ">
+        <div id="u105_text" class="text " style="width: 500px;">
             <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 性&nbsp;&nbsp; 别 ：<%=user_detail.getSex()%></span></p><p><span><br></span></p>
         </div>
     </div>
 
     <!-- 学校 (矩形) -->
-    <div id="u101" class="ax_default label" data-label="学校">
+    <div id="u101" class="ax_default label" data-label="学校" style="width: 500px;">
         <div id="u101_div" class=""></div>
-        <div id="u101_text" class="text ">
+        <div id="u101_text" class="text " style="width: 500px;">
             <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 学&nbsp;&nbsp; 校：<%=user_detail.getSchool()%></span></p><p><span><br></span></p>
         </div>
     </div>
 
     <!-- 专业 (矩形) -->
-    <div id="u124" class="ax_default label" data-label="专业">
+    <div id="u124" class="ax_default label" data-label="专业" style="width: 500px;">
         <div id="u124_div" class=""></div>
-        <div id="u124_text" class="text ">
+        <div id="u124_text" class="text " style="width: 500px;">
             <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 专&nbsp;&nbsp; 业：<%=user_detail.getProfession()%></span></p><p><span><br></span></p>
         </div>
     </div>
@@ -112,7 +112,7 @@
         <div id="u107" class="ax_default box_3">
             <div id="u107_div" class=""></div>
             <div id="u107_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; 1、<%=knoList.get(i).getTitle()%></a> </span></p>
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a> </span></p>
             </div>
         </div>
     <%
@@ -122,7 +122,7 @@
         <div id="u108" class="ax_default box_3">
             <div id="u108_div" class=""></div>
             <div id="u108_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;2、 <%=knoList.get(i).getTitle()%></a> </span></p>
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span></p>
             </div>
         </div>
     <%
@@ -132,7 +132,7 @@
         <div id="u103" class="ax_default box_3">
             <div id="u103_div" class=""></div>
             <div id="u103_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;3、 <%=knoList.get(i).getTitle()%></a> </span></p>
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span></p>
             </div>
         </div>
     <%
@@ -142,7 +142,7 @@
         <div id="u112" class="ax_default box_3">
             <div id="u112_div" class=""></div>
             <div id="u112_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;4、 <%=knoList.get(i).getTitle()%></a> </span></p>
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span></p>
             </div>
         </div>
     <%
@@ -152,7 +152,7 @@
         <div id="u104" class="ax_default box_3">
             <div id="u104_div" class=""></div>
             <div id="u104_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;5、 <%=knoList.get(i).getTitle()%></a> </span></p>
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span></p>
             </div>
         </div>--%>
     <%
@@ -162,7 +162,7 @@
         <div id="u109" class="ax_default box_3">
             <div id="u109_div" class=""></div>
             <div id="u109_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;6、 <%=knoList.get(i).getTitle()%></a> </span></p>
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span></p>
             </div>
         </div>
     <%
@@ -172,7 +172,7 @@
         <div id="u110" class="ax_default box_3">
             <div id="u110_div" class=""></div>
             <div id="u110_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;7、 <%=knoList.get(i).getTitle()%></a> </span></p>
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span></p>
             </div>
         </div>
     <%
@@ -182,7 +182,7 @@
         <div id="u113" class="ax_default box_3">
             <div id="u113_div" class=""></div>
             <div id="u113_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;8、 <%=knoList.get(i).getTitle()%></a> </span></p>
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span></p>
             </div>
         </div>
     <%
@@ -193,7 +193,7 @@
         <div id="u111" class="ax_default box_3">
             <div id="u111_div" class=""></div>
             <div id="u111_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;9、 <%=knoList.get(i).getTitle()%></a> </span></p>
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span></p>
             </div>
         </div>
     <%
@@ -203,7 +203,7 @@
         <div id="u102" class="ax_default box_3">
             <div id="u102_div" class=""></div>
             <div id="u102_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp;10、 <%=knoList.get(i).getTitle()%></a> </span></p>
+                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span></p>
             </div>
         </div>
 

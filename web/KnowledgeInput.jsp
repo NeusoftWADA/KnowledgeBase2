@@ -106,10 +106,7 @@
       </div>
     </div>
 
-    <!-- 确定按钮 (图片) -->
-    <div id="u177" class="ax_default _图片" data-label="确定按钮">
-      <img id="u177_img" class="img " src="images/主页/u57.png"/>
-    </div>
+
 
     <!-- 取消按钮 (图片) -->
     <div id="u178" class="ax_default _图片" data-label="取消按钮">
@@ -130,7 +127,7 @@
       </div>
 
       <!-- 内容输入 (多行文本框) -->
-      <div onsubmit="return save();">
+      <div onsubmit="return save();" style="margin-left: 540px;margin-top: 217px;height: 263px;width: 461px;">
         <div>
           <textarea id="u181" class="ax_default text_area" data-label="内容输入" name="content" style="width:100%;height:600px;border: 0 none;visibility:hidden;"></textarea>
           <textarea id="u181_input" rows="" cols="" name="content" id="schtmlnr" style="display:none;">请输入内容…</textarea>
@@ -149,6 +146,10 @@
       </div>
 
       <%--此处缺少一个提交按钮--%>
+      <!-- 确定按钮 (图片) -->
+      <div id="u177" class="ax_default _图片" data-label="确定按钮">
+        <input class="img "  id="u177_img" src="images/主页/u57.png" type="submit"/>
+      </div>
 
     </form>
 
