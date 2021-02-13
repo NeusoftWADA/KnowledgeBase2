@@ -49,7 +49,7 @@
     </div>
 
     <!-- 录入按钮 (图片) -->
-    <div id="u99" class="ax_default _图片" onclick="javascript:window.location.href='KnowledgeInput.jsp';" data-label="录入按钮">
+    <div id="u99" class="ax_default _图片" onclick="javascript:window.location.href='KnowledgeInput.jsp';"data-label="录入按钮">
         <img id="u99_img" class="img " src="images/个人页/录入按钮_u99.png"/>
     </div>
 

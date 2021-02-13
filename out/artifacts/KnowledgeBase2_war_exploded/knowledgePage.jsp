@@ -17,6 +17,7 @@
     <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
     <link href="data/styles.css" type="text/css" rel="stylesheet"/>
     <link href="files/知识点页/styles.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 </head>
 <%
     Knowledge knowledge =(Knowledge) request.getAttribute("knowledge");

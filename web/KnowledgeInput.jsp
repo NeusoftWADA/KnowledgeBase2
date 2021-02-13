@@ -29,9 +29,9 @@
     <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
     <link href="data/styles.css" type="text/css" rel="stylesheet"/>
     <link href="files/知识点录入页/styles.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script charset="utf-8" src="kindeditor/kindeditor-all-min.js"></script>
     <script charset="utf-8" src="kindeditor/lang/zh-CN.js"></script>
-
     <script type="text/javascript">
       var editor;
       KindEditor.ready(function(K) {

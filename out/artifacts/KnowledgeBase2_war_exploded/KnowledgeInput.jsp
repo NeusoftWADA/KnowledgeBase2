@@ -29,9 +29,9 @@
     <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
     <link href="data/styles.css" type="text/css" rel="stylesheet"/>
     <link href="files/知识点录入页/styles.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script charset="utf-8" src="kindeditor/kindeditor-all-min.js"></script>
     <script charset="utf-8" src="kindeditor/lang/zh-CN.js"></script>
-
     <script type="text/javascript">
       var editor;
       KindEditor.ready(function(K) {
@@ -130,12 +130,12 @@
       </div>
 
       <!-- 内容输入 (多行文本框) -->
-      <div onsubmit="return save();">
+      <from  action="addNews.do" method="post"  onsubmit="return save();">
         <div>
           <textarea id="u181" class="ax_default text_area" data-label="内容输入" name="content" style="width:100%;height:600px;border: 0 none;visibility:hidden;"></textarea>
           <textarea id="u181_input" rows="" cols="" name="content" id="schtmlnr" style="display:none;">请输入内容…</textarea>
         </div>
-      </div>
+      </from>
 
       <!-- 分类选择 (下拉列表框) -->
       <div id="u180" class="ax_default droplist" data-label="分类选择" title="请选择分类">
