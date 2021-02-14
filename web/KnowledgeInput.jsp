@@ -120,7 +120,7 @@
 
 
 
-    <form action="/myweb/knowledge/input" method="get">
+    <form action="/myweb/knowledge/input" method="post">
       <!-- 标题输入 (文本框) -->
       <div id="u182" class="ax_default text_field" data-label="标题输入">
         <input id="u182_input" type="text" name="title" value="请输入标题…"/>

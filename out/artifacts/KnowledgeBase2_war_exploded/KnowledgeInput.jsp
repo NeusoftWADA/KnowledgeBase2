@@ -106,10 +106,7 @@
       </div>
     </div>
 
-    <!-- 确定按钮 (图片) -->
-    <div id="u177" class="ax_default _图片" data-label="确定按钮">
-      <img id="u177_img" class="img " src="images/主页/u57.png"/>
-    </div>
+
 
     <!-- 取消按钮 (图片) -->
     <div id="u178" class="ax_default _图片" data-label="取消按钮">
@@ -123,7 +120,7 @@
 
 
 
-    <form action="/myweb/knowledge/input" method="get">
+    <form action="/myweb/knowledge/input" method="post">
       <!-- 标题输入 (文本框) -->
       <div id="u182" class="ax_default text_field" data-label="标题输入">
         <input id="u182_input" type="text" name="title" value="请输入标题…"/>
@@ -149,6 +146,10 @@
       </div>
 
       <%--此处缺少一个提交按钮--%>
+      <!-- 确定按钮 (图片) -->
+      <div id="u177" class="ax_default _图片" data-label="确定按钮">
+        <input class="img "  id="u177_img" src="images/主页/u57.png" type="submit"/>
+      </div>
 
     </form>
 

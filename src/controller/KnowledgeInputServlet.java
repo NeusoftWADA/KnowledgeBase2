@@ -13,11 +13,12 @@ import java.util.List;
 
 public class KnowledgeInputServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         TypeDao typeDao = new TypeDao();
         UserDao userDao = new UserDao();
         KnowledgeDao knowledgeDao = new KnowledgeDao();
 
+        request.setCharacterEncoding("utf-8");
         String title, content, cname;
         Integer tid,uid;
         int result = 0;
@@ -26,7 +27,7 @@ public class KnowledgeInputServlet extends HttpServlet {
         cname = request.getParameter("selectType");
 
         //根据分类名找到分类编号
-        tid = typeDao.findId("cname");
+        tid = typeDao.findId(cname);
         HttpSession session = request.getSession();
         String  id = (String) session.getAttribute("uid");
         //通过用户的id找到uid
@@ -55,4 +56,8 @@ public class KnowledgeInputServlet extends HttpServlet {
 
     }
 
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        this.doPost(req, resp);
+    }
 }

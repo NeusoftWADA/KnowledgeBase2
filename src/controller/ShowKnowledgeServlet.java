@@ -28,11 +28,15 @@ public class ShowKnowledgeServlet extends HttpServlet {
 
         //取出用户对应的知识点
         List<Knowledge> knowledges = dao.knowledges_fetch(uid);
-        //取出用户的详细信心
+        //取出用户的详细信息
         User_detail user_detail = user_detailDao.User_detail_find(uid);
 
         session.setAttribute("user_detail",user_detail);
         request.setAttribute("knowledges",knowledges);
         request.getRequestDispatcher("/PersonalPage.jsp").forward(request,response);
+    }
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        this.doPost(req, resp);
     }
 }
