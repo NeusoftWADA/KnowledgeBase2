@@ -11,6 +11,11 @@
 第一次flag为-1，否则为0
 --%>
 <%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+%>
+<base href="<%=basePath%>">
+<%
     Integer res = (Integer) request.getAttribute("res");
     int flag = 0;
     if (res == null) {

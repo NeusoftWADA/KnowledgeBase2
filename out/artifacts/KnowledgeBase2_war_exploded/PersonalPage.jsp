@@ -9,7 +9,11 @@
 --%>
 
 <%--删除成功暂时注销--%>
-
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+%>
+<base href="<%=basePath%>">
 <%
     User_detail user_detail =(User_detail) session.getAttribute("user_detail");
 %>

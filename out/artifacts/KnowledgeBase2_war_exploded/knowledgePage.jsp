@@ -20,6 +20,11 @@
     <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 </head>
 <%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+%>
+<base href="<%=basePath%>">
+<%
     Knowledge knowledge =(Knowledge) request.getAttribute("knowledge");
     String cname = (String) request.getAttribute("cname");
 %>
