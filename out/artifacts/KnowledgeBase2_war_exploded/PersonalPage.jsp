@@ -69,7 +69,8 @@
     <div id="u106" class="ax_default _文本段落" data-label="个性签名" style="width: 500px;">
         <div id="u106_div" class=""></div>
         <div id="u106_text" class="text " style="width: 500px;">
-            <p><span style="color:#FFFFFF;">个性签名：<%=user_detail.getTitle()%></span></p><p><span><br></span></p><p><span><br></span></p>
+
+            <p><span style="color:#FFFFFF;">个性签名：  <% if(user_detail!=null){%> <%=user_detail.getTitle()%> <% }%></span></p><p><span><br></span></p><p><span><br></span></p>
         </div>
     </div>
 
@@ -77,15 +78,20 @@
     <div id="u97" class="ax_default label" data-label="爱好" style="width: 500px;">
         <div id="u97_div" class=""></div>
         <div id="u97_text" class="text " style="width: 500px;">
-            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 爱&nbsp;&nbsp; 好 ：<%=user_detail.getContent()%></span></p><p><span><br></span></p>
+            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 爱&nbsp;&nbsp; 好 ：<% if(user_detail!=null){%> <%=user_detail.getContent()%> <% }%></span></p><p><span><br></span></p>
         </div>
     </div>
+
+
+
+
+
 
     <!-- 性别 (矩形) -->
     <div id="u105" class="ax_default label" data-label="性别" style="width: 500px;">
         <div id="u105_div" class=""></div>
         <div id="u105_text" class="text " style="width: 500px;">
-            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 性&nbsp;&nbsp; 别 ：<%=user_detail.getSex()%></span></p><p><span><br></span></p>
+            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 性&nbsp;&nbsp; 别 ：<% if(user_detail!=null){%> <%=user_detail.getSex()%> <% }%></span></p><p><span><br></span></p>
         </div>
     </div>
 
@@ -93,7 +99,7 @@
     <div id="u101" class="ax_default label" data-label="学校" style="width: 500px;">
         <div id="u101_div" class=""></div>
         <div id="u101_text" class="text " style="width: 500px;">
-            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 学&nbsp;&nbsp; 校：<%=user_detail.getSchool()%></span></p><p><span><br></span></p>
+            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 学&nbsp;&nbsp; 校：<% if(user_detail!=null){%> <%=user_detail.getSchool()%> <% }%></span></p><p><span><br></span></p>
         </div>
     </div>
 
@@ -101,7 +107,7 @@
     <div id="u124" class="ax_default label" data-label="专业" style="width: 500px;">
         <div id="u124_div" class=""></div>
         <div id="u124_text" class="text " style="width: 500px;">
-            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 专&nbsp;&nbsp; 业：<%=user_detail.getProfession()%></span></p><p><span><br></span></p>
+            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 专&nbsp;&nbsp; 业：<% if(user_detail!=null){%> <%=user_detail.getProfession()%> <% }%></span></p><p><span><br></span></p>
         </div>
     </div>
 
