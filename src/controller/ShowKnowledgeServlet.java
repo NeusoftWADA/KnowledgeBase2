@@ -30,7 +30,6 @@ public class ShowKnowledgeServlet extends HttpServlet {
         List<Knowledge> knowledges = dao.knowledges_fetch(uid);
         //取出用户的详细信息
         User_detail user_detail = user_detailDao.User_detail_find(uid);
-
         session.setAttribute("user_detail",user_detail);
         request.setAttribute("knowledges",knowledges);
         request.getRequestDispatcher("/PersonalPage.jsp").forward(request,response);

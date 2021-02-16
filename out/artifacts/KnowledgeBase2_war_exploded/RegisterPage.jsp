@@ -5,24 +5,18 @@
   Time: 0:46
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<%--判断第几次跳转到此页面
-第一次flag为-1，否则为0
---%>
-<%
-    String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
-%>
+<%String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";%>
 <base href="<%=basePath%>">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<%
-    Integer result = (Integer) request.getAttribute("result");
-    int flag = 0;
-    if (result == null) {
-        flag = -1;
-    }
-%>
+<%--判断第几次跳转到此页面,第一次flag为-1，否则为0--%>
+<c:set scope="page" var="flag" value="0"></c:set>
+<c:if test="${requestScope.result eq null}">
+    <c:set scope="page" var="flag" value="-1"></c:set>
+</c:if>
+
 <html>
 <head>
     <title>注册</title>
@@ -108,59 +102,42 @@
         </div>
     </form>
 
-
-
     <%-- //判断账号是否存在--%>
-    <%
-        if (flag == 0 && result == -1) {
-    %>
-    <!-- 注册错误提示1 (矩形) -->
-    <div id="u322" class="ax_default label" data-label="注册错误提示1">
-        <div id="u322_div" class=""></div>
-        <div id="u322_text" class="text ">
-            <p><span>*该账户已被注册</span></p>
+    <c:if test="${pageScope.flag eq 0 && requestScope.result eq -1}">
+        <!-- 注册错误提示1 (矩形) -->
+        <div id="u322" class="ax_default label" data-label="注册错误提示1">
+            <div id="u322_div" class=""></div>
+            <div id="u322_text" class="text ">
+                <p><span>*该账户已被注册</span></p>
+            </div>
         </div>
-    </div>
-    <%
-        }
-    %>
+    </c:if>
 
     <%--判断密码是否小于6位数--%>
-    <%
-        if (flag == 0 && result == -3) {
-    %>
-    <!-- 注册错误提示2 (矩形) -->
-    <div id="u323" class="ax_default label" data-label="注册错误提示2">
-        <div id="u323_div" class=""></div>
-        <div id="u323_text" class="text ">
-            <p><span>*密码长度不符合要求</span></p>
+    <c:if test="${pageScope.flag eq 0 && requestScope.result eq -3}">
+        <!-- 注册错误提示2 (矩形) -->
+        <div id="u323" class="ax_default label" data-label="注册错误提示2">
+            <div id="u323_div" class=""></div>
+            <div id="u323_text" class="text ">
+                <p><span>*密码长度不符合要求</span></p>
+            </div>
         </div>
-    </div>
-    <%
-        }
-    %>
+    </c:if>
 
     <%--判断第二次密码是否正确--%>
-    <%
-        if (flag == 0 && result == -2) {
-    %>
-    <!-- 注册错误提示3 (矩形) -->
-    <div id="u324" class="ax_default label" data-label="注册错误提示3">
-        <div id="u324_div" class=""></div>
-        <div id="u324_text" class="text ">
-            <p><span>*第二次密码输入错误</span></p>
+    <c:if test="${pageScope.flag eq 0 && requestScope.result eq -2}">
+        <!-- 注册错误提示3 (矩形) -->
+        <div id="u324" class="ax_default label" data-label="注册错误提示3">
+            <div id="u324_div" class=""></div>
+            <div id="u324_text" class="text ">
+                <p><span>*第二次密码输入错误</span></p>
+            </div>
         </div>
-    </div>
-    <%
-        }
-    %>
+    </c:if>
 
 
-<%--判断是否注册成功--%>
-    <%
-        if (flag == 0 && result == 1) {
-    %>
-
+    <%--判断是否注册成功--%>
+    <c:if test="${pageScope.flag eq 0 && requestScope.result eq 1}">
     <!-- 注册成功 (组 合) -->
     <div id="u325" class="ax_default" data-label="注册成功" data-left="501" data-top="159" data-width="588"
          data-height="344">
@@ -186,11 +163,7 @@
         <div id="u328" onclick="javascript:window.location.href='SignInPage.jsp';" class="ax_default"></div>
     </div>
 
-
-    <%
-        }
-    %>
-
+    </c:if>
 
     <!-- 注册账号输入提示 (矩形) -->
     <div id="u319" class="ax_default label" data-label="注册账号输入提示">

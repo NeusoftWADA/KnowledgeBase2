@@ -7,13 +7,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%
-    Integer loginResult = (Integer) request.getAttribute("loginResult");
-    int flag = 0;
-    if (loginResult == null) {
-        flag = -1;
-    }
-%>
+
+<%--判断第几次跳转到此页面
+第一次flag为-1，否则为0   --%>
+<c:set scope="page" var="flag" value="0"></c:set>
+
+<c:if test="${requestScope.loginResult eq null}">
+    <c:set scope="page" var="flag" value="-1"></c:set>
+</c:if>
+
 <html>
 <head>
     <title>登录</title>
@@ -73,20 +75,16 @@
         </div>
 
         <%--判断用户名密码是否正确--%>
-        <%
-            if (flag == 0 && loginResult == 0) {
-        %>
-        <!-- 登录错误提示 (矩形) -->
-        <div id="u307" class="ax_default label" data-label="登录错误提示">
-            <div id="u307_div" class=""></div>
-            <div id="u307_text" class="text ">
-                <p><span>*用户名密码有误，请仔细核对后再登录</span></p>
+        <c:if test="${pageScope.flag eq 0 &&requestScope.loginResult eq 0}">
+            <!-- 登录错误提示 (矩形) -->
+            <div id="u307" class="ax_default label" data-label="登录错误提示">
+                <div id="u307_div" class=""></div>
+                <div id="u307_text" class="text ">
+                    <p><span>*用户名密码有误，请仔细核对后再登录</span></p>
+                </div>
             </div>
-        </div>
-        <%
-            }
-        %>
-
+        </c:if>
+=
         <!-- 登录按钮 (矩形) -->
         <div id="u304" class="ax_default primary_button" data-label="登录按钮">
             <input type="submit" id="u304_div" class="" value="登录" style=" color:#FFFFFF; ">

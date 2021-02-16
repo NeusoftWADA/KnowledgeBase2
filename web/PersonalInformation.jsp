@@ -5,23 +5,18 @@
   Time: 20:11
   To change this template use File | Settings | File Templates.
 --%>
+<%String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";%>
+<base href="<%=basePath%>">
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%--判断第几次跳转到此页面
-第一次flag为-1，否则为0
---%>
-<%
-    String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
-%>
-<base href="<%=basePath%>">
-<%
-    Integer res = (Integer) request.getAttribute("res");
-    int flag = 0;
-    if (res == null) {
-        flag = -1;
-    }
-%>
+
+<%--判断第几次跳转到此页面,第一次flag为-1，否则为0--%>
+<c:set scope="page" var="flag" value="0"></c:set>
+<c:if test="${requestScope.res eq null}">
+    <c:set scope="page" var="flag" value="-1"></c:set>
+</c:if>
+
 <html>
 <head>
     <title>个人信息页</title>
@@ -175,6 +170,8 @@
         <input id="u158_input" type="text"  name="profession" value="${sessionScope.user_detail.profession}"/>
     </div>
 
+
+        <%--此处的确认按钮需要修改 --%>
     <!-- 确认按钮 (矩形) -->
     <div id="u160" class="ax_default primary_button" data-label="确认按钮">
         <div id="u160_div" class=""></div>
@@ -182,8 +179,6 @@
             <p><span>确认按钮</span></p>
         </div>
     </div>
-
-
     </form>
 
     <!-- 取消按钮 (矩形) -->
@@ -196,9 +191,7 @@
 
 
     <%--判断是否注册成功--%>
-    <%
-        if (flag == 0 && res == 1) {
-    %>
+    <c:if test="${pageScope.flag eq 0 && requestScope.res eq 1}">
     <!-- 修改成功 (组 合) -->
     <div id="u162" class="ax_default" data-label="修改成功" data-left="-97" data-top="0" data-width="1813" data-height="899">
 
@@ -224,10 +217,7 @@
         <div id="u166" class="ax_default" onclick="javascript:window.location.href='PersonalPage.jsp';" data-label="返回热区">
         </div>
     </div>
-    <%
-        }
-    %>
-
+    </c:if>
 </div>
 </body>
 </html>

@@ -7,18 +7,12 @@
   Time: 19:46
   To change this template use File | Settings | File Templates.
 --%>
-
-<%--删除成功暂时注销--%>
-<%
-    String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
-%>
+<%String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";%>
 <base href="<%=basePath%>">
-<%
-    User_detail user_detail =(User_detail) session.getAttribute("user_detail");
-%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%--删除成功暂时注销--%>
 <html>
 <head>
     <title>个人页</title>
@@ -42,7 +36,8 @@
     <div id="u96" class="ax_default label" data-label="用户账号1">
         <div id="u96_div" class=""></div>
         <div id="u96_text" class="text ">
-            <p><span style="color:#FFFFFF;">账号：</span></p><p><span><br></span></p>
+            <p><span style="color:#FFFFFF;">账号：</span></p>
+            <p><span><br></span></p>
         </div>
     </div>
 
@@ -53,7 +48,8 @@
     </div>
 
     <!-- 录入按钮 (图片) -->
-    <div id="u99" class="ax_default _图片" onclick="javascript:window.location.href='KnowledgeInput.jsp';"data-label="录入按钮">
+    <div id="u99" class="ax_default _图片" onclick="javascript:window.location.href='KnowledgeInput.jsp';"
+         data-label="录入按钮">
         <img id="u99_img" class="img " src="images/个人页/录入按钮_u99.png"/>
     </div>
 
@@ -65,12 +61,19 @@
         </div>
     </div>
 
+
     <!-- 个性签名 (矩形) -->
     <div id="u106" class="ax_default _文本段落" data-label="个性签名" style="width: 500px;">
         <div id="u106_div" class=""></div>
         <div id="u106_text" class="text " style="width: 500px;">
-
-            <p><span style="color:#FFFFFF;">个性签名：  <% if(user_detail!=null){%> <%=user_detail.getTitle()%> <% }%></span></p><p><span><br></span></p><p><span><br></span></p>
+            <p><span style="color:#FFFFFF;">个性签名：
+                <c:choose>
+                    <c:when test="${sessionScope.user_detail != null}">${sessionScope.user_detail.title}</c:when>
+                    <c:otherwise></c:otherwise>
+                </c:choose>
+            </span></p>
+            <p><span><br></span></p>
+            <p><span><br></span></p>
         </div>
     </div>
 
@@ -78,20 +81,27 @@
     <div id="u97" class="ax_default label" data-label="爱好" style="width: 500px;">
         <div id="u97_div" class=""></div>
         <div id="u97_text" class="text " style="width: 500px;">
-            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 爱&nbsp;&nbsp; 好 ：<% if(user_detail!=null){%> <%=user_detail.getContent()%> <% }%></span></p><p><span><br></span></p>
+            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 爱&nbsp;&nbsp; 好 ：
+                <c:choose>
+                    <c:when test="${sessionScope.user_detail != null}">${sessionScope.user_detail.content}</c:when>
+                    <c:otherwise></c:otherwise>
+                </c:choose></span></p>
+            <p><span><br></span></p>
         </div>
     </div>
-
-
-
-
 
 
     <!-- 性别 (矩形) -->
     <div id="u105" class="ax_default label" data-label="性别" style="width: 500px;">
         <div id="u105_div" class=""></div>
         <div id="u105_text" class="text " style="width: 500px;">
-            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 性&nbsp;&nbsp; 别 ：<% if(user_detail!=null){%> <%=user_detail.getSex()%> <% }%></span></p><p><span><br></span></p>
+            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 性&nbsp;&nbsp; 别 ：
+                <c:choose>
+                    <c:when test="${sessionScope.user_detail != null}">${sessionScope.user_detail.sex}</c:when>
+                    <c:otherwise></c:otherwise>
+                </c:choose></span>
+            </p>
+            <p><span><br></span></p>
         </div>
     </div>
 
@@ -99,7 +109,13 @@
     <div id="u101" class="ax_default label" data-label="学校" style="width: 500px;">
         <div id="u101_div" class=""></div>
         <div id="u101_text" class="text " style="width: 500px;">
-            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 学&nbsp;&nbsp; 校：<% if(user_detail!=null){%> <%=user_detail.getSchool()%> <% }%></span></p><p><span><br></span></p>
+            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 学&nbsp;&nbsp; 校：
+                <c:choose>
+                    <c:when test="${sessionScope.user_detail != null}">${sessionScope.user_detail.school}</c:when>
+                    <c:otherwise></c:otherwise>
+                </c:choose></span>
+            </p>
+            <p><span><br></span></p>
         </div>
     </div>
 
@@ -107,123 +123,145 @@
     <div id="u124" class="ax_default label" data-label="专业" style="width: 500px;">
         <div id="u124_div" class=""></div>
         <div id="u124_text" class="text " style="width: 500px;">
-            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 专&nbsp;&nbsp; 业：<% if(user_detail!=null){%> <%=user_detail.getProfession()%> <% }%></span></p><p><span><br></span></p>
+            <p><span style="color:#FFFFFF;">&nbsp;&nbsp; 专&nbsp;&nbsp; 业：
+                    <c:choose>
+                        <c:when test="${sessionScope.user_detail != null}">${sessionScope.user_detail.profession}</c:when>
+                        <c:otherwise></c:otherwise>
+                    </c:choose></span>
+            </p>
+            <p><span><br></span></p>
         </div>
     </div>
 
 
     <%
-        List<Knowledge> knoList = (List)request.getAttribute("knowledges");
-
+        List<Knowledge> knoList = (List) request.getAttribute("knowledges");
         for (int i = 0; i < knoList.size(); i++) {
-            if (i==0){
+            if (i == 0) {
     %>
-        <!-- Unnamed (矩形) -->
-        <div id="u107" class="ax_default box_3">
-            <div id="u107_div" class=""></div>
-            <div id="u107_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a> </span></p>
-            </div>
+    <!-- Unnamed (矩形) -->
+    <div id="u107" class="ax_default box_3">
+        <div id="u107_div" class=""></div>
+        <div id="u107_text" class="text ">
+            <p><span><a
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a> </span>
+            </p>
         </div>
+    </div>
     <%
-            }else if (i==1){
+    } else if (i == 1) {
     %>
-        <!-- Unnamed (矩形) -->
-        <div id="u108" class="ax_default box_3">
-            <div id="u108_div" class=""></div>
-            <div id="u108_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span></p>
-            </div>
+    <!-- Unnamed (矩形) -->
+    <div id="u108" class="ax_default box_3">
+        <div id="u108_div" class=""></div>
+        <div id="u108_text" class="text ">
+            <p><span><a
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span>
+            </p>
         </div>
+    </div>
     <%
-            }else if (i==2){
+    } else if (i == 2) {
     %>
-        <!-- Unnamed (矩形) -->
-        <div id="u103" class="ax_default box_3">
-            <div id="u103_div" class=""></div>
-            <div id="u103_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span></p>
-            </div>
+    <!-- Unnamed (矩形) -->
+    <div id="u103" class="ax_default box_3">
+        <div id="u103_div" class=""></div>
+        <div id="u103_text" class="text ">
+            <p><span><a
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span>
+            </p>
         </div>
+    </div>
     <%
-            }else if (i==3){
+    } else if (i == 3) {
     %>
-        <!-- Unnamed (矩形) -->
-        <div id="u112" class="ax_default box_3">
-            <div id="u112_div" class=""></div>
-            <div id="u112_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span></p>
-            </div>
+    <!-- Unnamed (矩形) -->
+    <div id="u112" class="ax_default box_3">
+        <div id="u112_div" class=""></div>
+        <div id="u112_text" class="text ">
+            <p><span><a
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span>
+            </p>
         </div>
+    </div>
     <%
-            }else if (i==4){
+    } else if (i == 4) {
     %>
-        <!-- Unnamed (矩形) -->
-        <div id="u104" class="ax_default box_3">
-            <div id="u104_div" class=""></div>
-            <div id="u104_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span></p>
-            </div>
-        </div>--%>
-    <%
-            }else if (i==5){
-    %>
-        <!-- Unnamed (矩形) -->
-        <div id="u109" class="ax_default box_3">
-            <div id="u109_div" class=""></div>
-            <div id="u109_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span></p>
-            </div>
+    <!-- Unnamed (矩形) -->
+    <div id="u104" class="ax_default box_3">
+        <div id="u104_div" class=""></div>
+        <div id="u104_text" class="text ">
+            <p><span><a
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span>
+            </p>
         </div>
+    </div>
+    --%>
     <%
-            }else if (i==6){
+    } else if (i == 5) {
     %>
-        <!-- Unnamed (矩形) -->
-        <div id="u110" class="ax_default box_3">
-            <div id="u110_div" class=""></div>
-            <div id="u110_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span></p>
-            </div>
+    <!-- Unnamed (矩形) -->
+    <div id="u109" class="ax_default box_3">
+        <div id="u109_div" class=""></div>
+        <div id="u109_text" class="text ">
+            <p><span><a
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span>
+            </p>
         </div>
+    </div>
     <%
-            }else if (i==7){
+    } else if (i == 6) {
     %>
-        <!-- Unnamed (矩形) -->
-        <div id="u113" class="ax_default box_3">
-            <div id="u113_div" class=""></div>
-            <div id="u113_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span></p>
-            </div>
+    <!-- Unnamed (矩形) -->
+    <div id="u110" class="ax_default box_3">
+        <div id="u110_div" class=""></div>
+        <div id="u110_text" class="text ">
+            <p><span><a
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span>
+            </p>
         </div>
+    </div>
     <%
-            }else if (i==8){
+    } else if (i == 7) {
+    %>
+    <!-- Unnamed (矩形) -->
+    <div id="u113" class="ax_default box_3">
+        <div id="u113_div" class=""></div>
+        <div id="u113_text" class="text ">
+            <p><span><a
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span>
+            </p>
+        </div>
+    </div>
+    <%
+    } else if (i == 8) {
     %>
 
-        <!-- Unnamed (矩形) -->
-        <div id="u111" class="ax_default box_3">
-            <div id="u111_div" class=""></div>
-            <div id="u111_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span></p>
-            </div>
+    <!-- Unnamed (矩形) -->
+    <div id="u111" class="ax_default box_3">
+        <div id="u111_div" class=""></div>
+        <div id="u111_text" class="text ">
+            <p><span><a
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span>
+            </p>
         </div>
+    </div>
     <%
-            }else if (i==9){
+    } else if (i == 9) {
     %>
-        <!-- Unnamed (矩形) -->
-        <div id="u102" class="ax_default box_3">
-            <div id="u102_div" class=""></div>
-            <div id="u102_text" class="text ">
-                <p><span><a href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span></p>
-            </div>
+    <!-- Unnamed (矩形) -->
+    <div id="u102" class="ax_default box_3">
+        <div id="u102_div" class=""></div>
+        <div id="u102_text" class="text ">
+            <p><span><a
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span>
+            </p>
         </div>
-
+    </div>
     <%
             }
         }
     %>
-
-
-
 
 
     <!-- 删除知识点按钮 (图片) -->
@@ -296,21 +334,22 @@
     </div>
 
 
-
     <!-- 个人信息按钮 (热区) -->
-    <div id="u125" class="ax_default" onclick="javascript:window.location.href='PersonalInformation.jsp';" data-label="个人信息按钮">
+    <div id="u125" class="ax_default" onclick="javascript:window.location.href='PersonalInformation.jsp';"
+         data-label="个人信息按钮">
     </div>
 
     <!-- 导航 (组 合) -->
     <div id="u126" class="ax_default" data-label="导航" data-left="-122" data-top="0" data-width="1823" data-height="56">
 
         <!-- Unnamed (矩形) -->
-        <div id="u127" class="ax_default box_2" >
+        <div id="u127" class="ax_default box_2">
             <div id="u127_div" class=""></div>
         </div>
 
         <!-- 主页按钮 (图片) -->
-        <div id="u128" class="ax_default _图片" data-label="主页按钮" onclick="javascript:window.location.href='HomePage.jsp';">
+        <div id="u128" class="ax_default _图片" data-label="主页按钮"
+             onclick="javascript:window.location.href='HomePage.jsp';">
             <img id="u128_img" class="img " src="images/管理员页/主页按钮_u66.png"/>
         </div>
 
@@ -342,33 +381,33 @@
         </div>
 
         <!-- Unnamed (图片) -->
-        <div id="u134" class="ax_default _图片"onclick="javascript:window.location.href='SearchPage.jsp';">
+        <div id="u134" class="ax_default _图片" onclick="javascript:window.location.href='SearchPage.jsp';">
             <img id="u134_img" class="img " src="images/主页/查询_u1.png"/>
         </div>
     </div>
 
-<%--    <!-- 删除成功 (组 合) -->
-    <div id="u135" class="ax_default" data-label="录入成功" data-left="-223" data-top="0" data-width="2721" data-height="1488">
+    <%--    <!-- 删除成功 (组 合) -->
+        <div id="u135" class="ax_default" data-label="录入成功" data-left="-223" data-top="0" data-width="2721" data-height="1488">
 
-        <!-- 遮蔽 (矩形) -->
-        <div id="u136" class="ax_default box_3" data-label="遮蔽">
-            <div id="u136_div" class=""></div>
-        </div>
-
-        <!-- 成功提示 (矩形) -->
-        <div id="u137" class="ax_default box_3" data-label="成功提示">
-            <div id="u137_div" class=""></div>
-            <div id="u137_text" class="text ">
-                <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 已删除，请刷新查看</span></p>
+            <!-- 遮蔽 (矩形) -->
+            <div id="u136" class="ax_default box_3" data-label="遮蔽">
+                <div id="u136_div" class=""></div>
             </div>
-        </div>
 
-        <!-- 成功图标 (图片) -->
-        <div id="u138" class="ax_default _图片" onclick="window.location.reload()"  data-label="成功图标">
-            <img id="u138_img" class="img " src="images/主页/u57.png"/>
-        </div>
+            <!-- 成功提示 (矩形) -->
+            <div id="u137" class="ax_default box_3" data-label="成功提示">
+                <div id="u137_div" class=""></div>
+                <div id="u137_text" class="text ">
+                    <p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 已删除，请刷新查看</span></p>
+                </div>
+            </div>
 
-    </div>--%>
+            <!-- 成功图标 (图片) -->
+            <div id="u138" class="ax_default _图片" onclick="window.location.reload()"  data-label="成功图标">
+                <img id="u138_img" class="img " src="images/主页/u57.png"/>
+            </div>
+
+        </div>--%>
 </div>
 </body>
 </html>
