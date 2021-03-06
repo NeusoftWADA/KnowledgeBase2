@@ -151,16 +151,15 @@
 
         <!-- 确定按钮 (图片) -->
         <div id="u177" class="ax_default _图片" data-label="确定按钮">
-            <input class="img " id="u177_img" src="images/主页/u57.png" type="submit"/>
+            <input   id="u177_img"  class="img "  src="images/主页/u57.png" type="image" align=absMiddle border=0 name=Redlmg onlick="this.form.submit"/>
         </div>
-
     </form>
 
 
     <c:if test="${pageScope.flag eq 0}">
         <c:if test="${requestScope.result eq -1}">
-            <!-- 登录错误提示 (矩形) -->
-            <div id="u184" class="ax_default label" data-label="登录错误提示">
+            <!-- 错误提示 (矩形) -->
+            <div id="u184" class="ax_default label" data-label="错误提示"style="top: 193px;">
                 <div id="u184_div" class=""></div>
                 <div id="u184_text" class="text ">
                     <p><span>*请核对标题是否填写</span></p>
@@ -170,8 +169,8 @@
         </c:if>
 
         <c:if test="${requestScope.result eq -2}">
-            <!-- 登录错误提示 (矩形) -->
-            <div id="u183" class="ax_default label" data-label="登录错误提示">
+            <!-- 错误提示 (矩形) -->
+            <div id="u183" class="ax_default label" data-label="错误提示" style="top: 825px;">
                 <div id="u183_div" class=""></div>
                 <div id="u183_text" class="text ">
                     <p><span>*内容不得为空</span></p>
@@ -180,8 +179,8 @@
         </c:if>
 
         <c:if test="${requestScope.result eq -3}">
-            <!-- 登录错误提示 (矩形) -->
-            <div id="u185" class="ax_default label" data-label="登录错误提示">
+            <!-- 错误提示 (矩形) -->
+            <div id="u185" class="ax_default label" data-label="错误提示" style="top: 885px;">
                 <div id="u185_div" class=""></div>
                 <div id="u185_text" class="text ">
                     <p><span>*请选择类别哦</span></p>
