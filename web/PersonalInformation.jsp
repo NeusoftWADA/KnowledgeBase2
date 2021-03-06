@@ -173,12 +173,19 @@
 
         <%--此处的确认按钮需要修改 --%>
     <!-- 确认按钮 (矩形) -->
-    <div id="u160" class="ax_default primary_button" data-label="确认按钮">
+<%--    <div id="u160" class="ax_default primary_button" data-label="确认按钮">
         <div id="u160_div" class=""></div>
         <div id="u160_text" class="text ">
             <p><span>确认按钮</span></p>
         </div>
-    </div>
+    </div>--%>
+        <%--确认按钮需要调整--%>
+        <div id="u160" class="ax_default primary_button" data-label="确认按钮">
+            <div id="u160_div" class=""></div>
+            <div>
+                 <input type="submit" value="确认按钮"  id="u160_text" class="text "/>
+            </div>
+        </div>
     </form>
 
     <!-- 取消按钮 (矩形) -->

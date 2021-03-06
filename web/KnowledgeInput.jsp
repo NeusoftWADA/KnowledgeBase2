@@ -157,8 +157,8 @@
     </form>
 
 
-    <c:if test="${pageScope.flag eq 0}">
-        <c:if test="${requestScope.result eq -1}">
+
+        <c:if test="${pageScope.flag eq 0 && requestScope.result eq -1 }">
             <!-- 登录错误提示 (矩形) -->
             <div id="u184" class="ax_default label" data-label="登录错误提示">
                 <div id="u184_div" class=""></div>
@@ -169,7 +169,7 @@
 
         </c:if>
 
-        <c:if test="${requestScope.result eq -2}">
+        <c:if test="${ pageScope.flag eq 0 && requestScope.result eq -2}">
             <!-- 登录错误提示 (矩形) -->
             <div id="u183" class="ax_default label" data-label="登录错误提示">
                 <div id="u183_div" class=""></div>
@@ -179,7 +179,7 @@
             </div>
         </c:if>
 
-        <c:if test="${requestScope.result eq -3}">
+        <c:if test="${pageScope.flag eq 0 && requestScope.result eq -3}">
             <!-- 登录错误提示 (矩形) -->
             <div id="u185" class="ax_default label" data-label="登录错误提示">
                 <div id="u185_div" class=""></div>
@@ -189,7 +189,8 @@
             </div>
         </c:if>
 
-        <c:if test="${requestScope.result eq 1}">
+
+
             <!-- 录入成功 (组 合) -->
             <div id="u186" class="ax_default" data-label="录入成功" data-left="-332" data-top="0" data-width="2722"
                  data-height="1426">
@@ -204,7 +205,7 @@
                     <div id="u188_div" class=""></div>
                     <div id="u188_text" class="text ">
                         <p><span> 已成功录入&nbsp; &nbsp;&nbsp; </span></p>
-                        <p><span><a href="/myweb/show/knowledge">请点击返回&nbsp; &nbsp;&nbsp; </a></span></p>
+                        <p><span>请点击返回&nbsp; &nbsp;&nbsp; </span></p>
                     </div>
                 </div>
 
@@ -217,8 +218,7 @@
                 <div id="u190" class="ax_default">
                 </div>
             </div>
-        </c:if>
-    </c:if>
+
 </div>
 </body>
 </html>
