@@ -18,6 +18,20 @@
     <link href="data/styles.css" type="text/css" rel="stylesheet"/><!--固定字体格式-->
     <link href="files/主页/styles.css" type="text/css" rel="stylesheet"/><!--本页的所有元素的颜色大小-->
     <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script>
+    function changeSrc1() {
+        document.getElementById("iframe1").setAttribute("src","javascript:window.location.href='ComputerClass.jsp';");
+    }
+    function changeSrc2() {
+        document.getElementById("iframe1").setAttribute("src","javascript:window.location.href='EnglishClass.jsp';");
+    }
+    function changeSrc3() {
+        document.getElementById("iframe1").setAttribute("src","javascript:window.location.href='MathematicsClass.jsp';");
+    }
+    function changeSrc4() {
+        document.getElementById("iframe1").setAttribute("src","javascript:window.location.href='PhysicalClass.jsp';");
+    }
+    </script>
 </head>
 
 <body>
@@ -64,7 +78,7 @@
 
     <!-- Unnamed (内联框架) -->
     <div id="u6" class="ax_default">
-        <iframe id="u6_input" scrolling="no" frameborder="1" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe name="iframe1" id="u6_input" scrolling="no" frameborder="1"  src="javascript:window.location.href='ComputerClass.jsp';"></iframe>
     </div>
 
     <!-- 边框 (组 合) -->
@@ -102,35 +116,31 @@
     <!-- 计算机类 (梯形) -->
     <div id="u13" class="ax_default flow_shape selected" data-label="计算机类" selectiongroup="类别选项组">
         <img id="u13_img" class="img " src="images/主页/计算机类_u13_selected.png" alt="计算机类"/>
-        <div id="u13_text" class="text ">
-            <p><span>计算机</span></p>
-        </div>
+
     </div>
 
     <!-- 英语类 (梯形) -->
     <div id="u14" class="ax_default flow_shape" data-label="英语类" selectiongroup="类别选项组">
         <img id="u14_img" class="img " src="images/主页/计算机类_u13.png" alt="英语类"/>
-        <div id="u14_text" class="text ">
-            <p><span>英语</span></p>
-        </div>
+
     </div>
 
     <!-- 数学类 (梯形) -->
     <div id="u15" class="ax_default flow_shape" data-label="数学类" selectiongroup="类别选项组">
         <img id="u15_img" class="img " src="images/主页/计算机类_u13.png" alt="数学类"/>
-        <div id="u15_text" class="text ">
-            <p><span>数学</span></p>
-        </div>
+
     </div>
 
     <!-- 物理类 (梯形) -->
     <div id="u16" class="ax_default flow_shape" data-label="物理类" selectiongroup="类别选项组">
         <img id="u16_img" class="img " src="images/主页/计算机类_u13.png" alt="物理类"/>
-        <div id="u16_text" class="text ">
-            <p><span>物理</span></p>
-        </div>
+
     </div>
 
+    <a id="u13_text" href="javascript:window.location.href='ComputerClass.jsp';"  style="color:#0BA4C6; left: 368px;top: 260px;font-size: 25;"target="iframe1">计算机</a>
+    <a id="u14_text" href="javascript:window.location.href='EnglishClass.jsp';" style="color:#0BA4C6; top: 260px;font-size: 25;left: 480px;"target="iframe1">英 语</a>
+    <a id="u15_text" href="javascript:window.location.href='MathematicsClass.jsp';" style="color:#0BA4C6; top: 260px;font-size: 25;left: 585px;" target="iframe1">数 学</a>
+    <a id="u16_text" href="javascript:window.location.href='PhysicalClass.jsp';" style="color:#0BA4C6; top: 260px;font-size: 25;left: 688px;" target="iframe1">物 理</a>
     <!-- 上标签切换按钮3 (矩形) -->
     <div id="u17" class="ax_default button" data-label="上标签切换按钮3">
         <div id="u17_div" class=""></div>

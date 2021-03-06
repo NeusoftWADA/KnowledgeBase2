@@ -90,7 +90,8 @@
 
     <!-- 管理员功能 (内联框架) -->
     <div id="u75" class="ax_default" data-label="管理员功能">
-        <iframe id="u75_input" data-label="管理员功能" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe id="u75_input" data-label="管理员功能" scrolling="no" frameborder="1" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        </iframe>
     </div>
 
     <!-- 管理员帐号 (矩形) -->
