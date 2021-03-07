@@ -37,10 +37,10 @@ public class KnowledgeInputServlet extends HttpServlet {
 
 
         //判断标题是否填写
-        if (title == null){
+        if (title == null||"请输入标题…".equals(title)){
             result = -1;
         }
-        if (content == null){
+        if (content == null||"".equals(content)){
             result = -2;
         }
         if ("—请选择类别—".equals(cname)){
