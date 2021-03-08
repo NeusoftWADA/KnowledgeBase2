@@ -1,12 +1,15 @@
 package controller;
 
 import dao.UserDao;
+import dao.User_detailDao;
 import entity.User;
+import entity.User_detail;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -17,7 +20,9 @@ public class UserAddServlet extends HttpServlet {
 
             String id, upassword, password;
             UserDao dao = new UserDao();
+            User_detailDao user_detailDao = new User_detailDao();
             int result = 0;
+            int res = 0;
 
             request.setCharacterEncoding("utf-8");
             id = request.getParameter("id");
@@ -45,8 +50,14 @@ public class UserAddServlet extends HttpServlet {
 
             //添加数据
             if (result != -1 &&result!=-2&&result!=-3) {
+                //添加用户
                 User user = new User(null, id, upassword);
                 result = dao.add(user);
+                //添加用户的详细信息
+                if(result==1){
+                    Integer uid = dao.findUid(id);
+                    user_detailDao.AddUser(null,null,null,null,null,uid);
+                }
             }
 
             request.setAttribute("result",result);
