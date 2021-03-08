@@ -18,20 +18,7 @@
     <link href="data/styles.css" type="text/css" rel="stylesheet"/><!--固定字体格式-->
     <link href="files/主页/styles.css" type="text/css" rel="stylesheet"/><!--本页的所有元素的颜色大小-->
     <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
-    <script>
-    function changeSrc1() {
-        document.getElementById("iframe1").setAttribute("src","javascript:window.location.href='ComputerClass.jsp';");
-    }
-    function changeSrc2() {
-        document.getElementById("iframe1").setAttribute("src","javascript:window.location.href='EnglishClass.jsp';");
-    }
-    function changeSrc3() {
-        document.getElementById("iframe1").setAttribute("src","javascript:window.location.href='MathematicsClass.jsp';");
-    }
-    function changeSrc4() {
-        document.getElementById("iframe1").setAttribute("src","javascript:window.location.href='PhysicalClass.jsp';");
-    }
-    </script>
+
 </head>
 
 <body>
@@ -137,10 +124,10 @@
 
     </div>
 
-    <a id="u13_text" href="javascript:window.location.href='ComputerClass.jsp';"  style="color:#0BA4C6; left: 368px;top: 260px;font-size: 25;"target="iframe1">计算机</a>
-    <a id="u14_text" href="javascript:window.location.href='EnglishClass.jsp';" style="color:#0BA4C6; top: 260px;font-size: 25;left: 480px;"target="iframe1">英 语</a>
-    <a id="u15_text" href="javascript:window.location.href='MathematicsClass.jsp';" style="color:#0BA4C6; top: 260px;font-size: 25;left: 585px;" target="iframe1">数 学</a>
-    <a id="u16_text" href="javascript:window.location.href='PhysicalClass.jsp';" style="color:#0BA4C6; top: 260px;font-size: 25;left: 688px;" target="iframe1">物 理</a>
+    <a id="u13_text" href="javascript:window.location.href='ComputerClass.jsp';"  style="text-decoration:none; color:#0BA4C6; left: 368px;top: 260px;font-size: 25;"target="iframe1">计算机</a>
+    <a id="u14_text" href="javascript:window.location.href='EnglishClass.jsp';" style="text-decoration:none; color:#0BA4C6; top: 260px;font-size: 25;left: 480px;"target="iframe1">英 语</a>
+    <a id="u15_text" href="javascript:window.location.href='MathematicsClass.jsp';" style="text-decoration:none;color:#0BA4C6; top: 260px;font-size: 25;left: 585px;" target="iframe1">数 学</a>
+    <a id="u16_text" href="javascript:window.location.href='PhysicalClass.jsp';" style="text-decoration:none; color:#0BA4C6; top: 260px;font-size: 25;left: 688px;" target="iframe1">物 理</a>
     <!-- 上标签切换按钮3 (矩形) -->
     <div id="u17" class="ax_default button" data-label="上标签切换按钮3">
         <div id="u17_div" class=""></div>

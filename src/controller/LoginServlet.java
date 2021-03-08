@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
             if (loginResult == 1) {
                 HttpSession session = request.getSession();
                 session.setAttribute("aid",id);
-                response.sendRedirect("/myweb/SignInPage.jsp");
+                response.sendRedirect("/myweb/ManagerPage.jsp");
             } else {
                 request.setAttribute("loginResult",loginResult);
                 request.getRequestDispatcher("/SignInPage.jsp").forward(request,response);

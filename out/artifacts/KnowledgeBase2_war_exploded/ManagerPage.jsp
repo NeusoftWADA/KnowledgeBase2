@@ -75,24 +75,20 @@
     <!-- 用户管理按钮 (矩形) -->
     <div id="u73" class="ax_default box_1 selected" data-label="用户管理按钮" selectiongroup="管理员功能">
         <div id="u73_div" class="selected"></div>
-        <div id="u73_text" class="text ">
-            <p><span>用户管理</span></p>
-        </div>
     </div>
 
     <!-- 设定关键词按钮 (矩形) -->
     <div id="u74" class="ax_default box_1" data-label="设定关键词按钮" selectiongroup="管理员功能">
         <div id="u74_div" class=""></div>
-        <div id="u74_text" class="text ">
-            <p><span>设定关键词</span></p>
-        </div>
     </div>
 
     <!-- 管理员功能 (内联框架) -->
     <div id="u75" class="ax_default" data-label="管理员功能">
-        <iframe id="u75_input" data-label="管理员功能" scrolling="no" frameborder="1" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        <iframe name="iframe2" id="u75_input" data-label="管理员功能" scrolling="no" frameborder="1" src="javascript:window.location.href='ManageUser.jsp';">
         </iframe>
     </div>
+    <a id="u73_text" href="javascript:window.location.href='ManageUser.jsp';"  style="style="text-decoration:none; color:#0BA4C6; left: 540px;top: 125px;font-size: 25;"target="iframe2">用户管理</a>
+    <a id="u74_text" href="javascript:window.location.href='WriteKeywordPage.jsp';" style="style="text-decoration:none; color:#0BA4C6; top: 125px;font-size: 25;left: 850px;"target="iframe2">设定关键词</a>
 
     <!-- 管理员帐号 (矩形) -->
     <div id="u76" class="ax_default _一级标题" data-label="管理员帐号">

@@ -144,6 +144,7 @@
         <div id="u107_div" class=""></div>
         <div id="u107_text" class="text ">
             <p><span><a
+                    style="text-decoration:none"
                     href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a> </span>
             </p>
         </div>
@@ -156,6 +157,7 @@
         <div id="u108_div" class=""></div>
         <div id="u108_text" class="text ">
             <p><span><a
+                    style="text-decoration:none"
                     href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span>
             </p>
         </div>
@@ -168,6 +170,7 @@
         <div id="u103_div" class=""></div>
         <div id="u103_text" class="text ">
             <p><span><a
+                    style="text-decoration:none"
                     href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span>
             </p>
         </div>
@@ -180,6 +183,7 @@
         <div id="u112_div" class=""></div>
         <div id="u112_text" class="text ">
             <p><span><a
+                    style="text-decoration:none"
                     href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span>
             </p>
         </div>
@@ -192,6 +196,7 @@
         <div id="u104_div" class=""></div>
         <div id="u104_text" class="text ">
             <p><span><a
+                    style="text-decoration:none"
                     href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span>
             </p>
         </div>
@@ -205,6 +210,7 @@
         <div id="u109_div" class=""></div>
         <div id="u109_text" class="text ">
             <p><span><a
+                    style="text-decoration:none"
                     href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span>
             </p>
         </div>
@@ -217,6 +223,7 @@
         <div id="u110_div" class=""></div>
         <div id="u110_text" class="text ">
             <p><span><a
+                    style="text-decoration:none"
                     href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span>
             </p>
         </div>
@@ -229,6 +236,7 @@
         <div id="u113_div" class=""></div>
         <div id="u113_text" class="text ">
             <p><span><a
+                    style="text-decoration:none"
                     href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a> </span>
             </p>
         </div>
@@ -242,6 +250,7 @@
         <div id="u111_div" class=""></div>
         <div id="u111_text" class="text ">
             <p><span><a
+                    style="text-decoration:none"
                     href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span>
             </p>
         </div>
@@ -254,6 +263,7 @@
         <div id="u102_div" class=""></div>
         <div id="u102_text" class="text ">
             <p><span><a
+                    style="text-decoration:none"
                     href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp; &nbsp; <%=knoList.get(i).getTitle()%></a> </span>
             </p>
         </div>
