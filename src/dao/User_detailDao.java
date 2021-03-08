@@ -11,6 +11,26 @@ import java.sql.SQLException;
 public class User_detailDao {
     private JdbcUtil util = new JdbcUtil();
 
+   //添加新注册的用户详细信息
+    public Integer AddUser(String title, String content, String sex, String school, String profession, Integer uid){
+        String sql = "insert user_detail set title=?,content=?,sex=?,school=?,profession=?,uid =?";
+        PreparedStatement ps = util.createStatement(sql);
+        User_detail user_detail = null;
+        int result = 0;
+        try {
+            ps.setString(1,title);
+            ps.setString(2,content);
+            ps.setString(3,sex);
+            ps.setString(4,school);
+            ps.setString(5,profession);
+            ps.setInt(6,uid);
+            result = ps.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return  result;
+    }
+
     //取出用户的详细信息
     public User_detail User_detail_find(Integer uid){
         String sql = "select * from user_detail where uid = ?";
