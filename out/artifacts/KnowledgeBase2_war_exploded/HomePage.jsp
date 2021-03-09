@@ -6,7 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";%>
+<base href="<%=basePath%>">
 <html>
 <head>
     <title>主页</title>
@@ -106,11 +108,13 @@
 
     </div>
 
+    
     <!-- 英语类 (梯形) -->
     <div id="u14" class="ax_default flow_shape" data-label="英语类" selectiongroup="类别选项组">
         <img id="u14_img" class="img " src="images/主页/计算机类_u13.png" alt="英语类"/>
 
     </div>
+
 
     <!-- 数学类 (梯形) -->
     <div id="u15" class="ax_default flow_shape" data-label="数学类" selectiongroup="类别选项组">
