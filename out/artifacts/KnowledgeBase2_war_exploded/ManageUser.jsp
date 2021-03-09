@@ -21,6 +21,7 @@
 <body>
 <div id="base" class="">
 
+    
     <!-- 查找框 (文本框) -->
     <div id="u77" class="ax_default text_field" data-label="查找框">
         <input id="u77_input" type="text" value="请输入用户名或相关词汇"/>

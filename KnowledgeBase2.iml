@@ -10,8 +10,8 @@
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
         <sourceRoots>
-            <root url="file://$MODULE_DIR$/src" />
-            <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src" />
+          <root url="file://$MODULE_DIR$/src/main/java" />
         </sourceRoots>
       </configuration>
     </facet>
@@ -24,5 +24,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jsp-api" level="project" />
+    <orderEntry type="library" name="jackson-annotations-2.9.0" level="project" />
   </component>
 </module>
