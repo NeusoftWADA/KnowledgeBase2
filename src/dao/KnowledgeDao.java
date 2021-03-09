@@ -12,6 +12,36 @@ import java.util.List;
 public class KnowledgeDao {
     private JdbcUtil util = new JdbcUtil();
 
+    //按分类取出点赞量比较多的知识点
+    public List<Knowledge> knowledges_fetchByType(Integer tid){
+        String sql = "select kid,title,content,attention,share,wid,uid from Knowledge where tid = ? order by attention desc limit 0,10";
+        String title,content;
+        Integer  kid,attention,share,wid,uid;
+        ResultSet rs = null;
+        List<Knowledge> list = new ArrayList<>();
+        PreparedStatement ps = util.createStatement(sql);
+        try {
+            ps.setInt(1,tid);
+            rs = ps.executeQuery();
+            while (rs.next()){
+                kid = rs.getInt("kid");
+                title = rs.getString("title");
+                content = rs.getString("content");
+                attention  = rs.getInt("attention");
+                share = rs.getInt("share");
+                wid = rs.getInt("wid");
+                uid = rs.getInt("uid");
+                Knowledge knowledge = new Knowledge(kid,title,content,attention,share,tid,wid,uid);
+                list.add(knowledge);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            util.close(rs);
+        }
+        return list;
+    }
+
     //取出所有知识点
     public List<Knowledge> knowledges_fetch(Integer uid){
         String sql = "select * from knowledge where uid = ?";

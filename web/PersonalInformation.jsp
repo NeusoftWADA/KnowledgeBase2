@@ -17,6 +17,8 @@
     <c:set scope="page" var="flag" value="-1"></c:set>
 </c:if>
 
+
+%>
 <html>
 <head>
     <title>个人信息页</title>

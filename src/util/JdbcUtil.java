@@ -8,14 +8,17 @@ import java.sql.*;
 // JdbcUtil.getCon();
 public class JdbcUtil {
 
-     final String URL="jdbc:mysql://172.17.8.19:3306/myk2";
-     final String USERNAME="myk2";
-     final String PASSWORD="myk2";
-     PreparedStatement ps= null;
-     Connection con = null;
+    /*     final String URL="jdbc:mysql://172.17.8.19:3306/myk2";
+         final String USERNAME="myk2";
+         final String PASSWORD="myk2";*/
+    final String URL = "jdbc:mysql://localhost:3306/web_mkl";
+    final String USERNAME = "root";
+    final String PASSWORD = "root";
+    PreparedStatement ps = null;
+    Connection con = null;
 
     //将jar包中driver实现类加载到JVM中
-    static{
+    static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
@@ -24,7 +27,7 @@ public class JdbcUtil {
     }
 
     //封装连接通道创建细节
-    public  Connection   getCon(){
+    public Connection getCon() {
 
         try {
             con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
@@ -35,20 +38,21 @@ public class JdbcUtil {
     }
 
     //封装交通工具创建细节
-    public  PreparedStatement createStatement(String sql){
+    public PreparedStatement createStatement(String sql) {
 
         try {
-            ps =  getCon().prepareStatement(sql);
+            ps = getCon().prepareStatement(sql);
         } catch (SQLException e) {
             e.printStackTrace();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return ps;
     }
+
     // ps与con销毁细节 insert,update,delete
-    public  void close(){
-        if(ps!=null){
+    public void close() {
+        if (ps != null) {
             try {
                 ps.close();
             } catch (SQLException e) {
@@ -56,7 +60,7 @@ public class JdbcUtil {
             }
         }
 
-        if(con!=null){
+        if (con != null) {
             try {
                 con.close();
             } catch (SQLException e) {
@@ -66,9 +70,9 @@ public class JdbcUtil {
 
     }
 
-     //select ps,con,rs
-    public  void close(ResultSet rs){
-        if(rs!=null){
+    //select ps,con,rs
+    public void close(ResultSet rs) {
+        if (rs != null) {
             try {
                 rs.close();
             } catch (SQLException e) {
