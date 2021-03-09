@@ -13,10 +13,7 @@
         <servlet-class>controller.UserAddServlet</servlet-class>
     </servlet>
 
-    <servlet>
-        <servlet-name>MakeKnowledgeServlet</servlet-name>
-        <servlet-class>controller.KnowledgeMakeServlet</servlet-class>
-    </servlet>
+
     <servlet>
         <servlet-name>ShowKnowledgeServlet</servlet-name>
         <servlet-class>controller.ShowKnowledgeServlet</servlet-class>
@@ -33,8 +30,15 @@
         <servlet-name>User_detailUpdateServlet</servlet-name>
         <servlet-class>controller.User_detailUpdateServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BeginRefreshServlet</servlet-name>
+        <servlet-class>controller.BeginRefreshServlet</servlet-class>
+    </servlet>
 
-
+    <servlet-mapping>
+        <servlet-name>BeginRefreshServlet</servlet-name>
+        <url-pattern>/begin/refresh</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>User_detailUpdateServlet</servlet-name>
         <url-pattern>/detail/update</url-pattern>
@@ -51,10 +55,7 @@
         <servlet-name>ShowKnowledgeServlet</servlet-name>
         <url-pattern>/show/knowledge</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>MakeKnowledgeServlet</servlet-name>
-        <url-pattern>/knowledge/add</url-pattern>
-    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>UserAddServlet</servlet-name>
         <url-pattern>/user/Add</url-pattern>
@@ -81,6 +82,6 @@
     -->
 
     <welcome-file-list>
-        <welcome-file>HomePage.jsp</welcome-file>
+        <welcome-file>begin/refresh</welcome-file>
     </welcome-file-list>
 </web-app>
