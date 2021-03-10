@@ -1,4 +1,5 @@
-<%--
+<%@ page import="entity.Knowledge" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: 齑粉玥
   Date: 2021/2/5
@@ -19,88 +20,133 @@
 </head>
 <body>
 <div id="base" class="">
-
+    <%
+        List<Knowledge> knoList = (List) session.getAttribute("高数");
+        for (int i = 0; i < knoList.size(); i++) {
+            if (i == 0) {
+    %>
     <!-- Unnamed (矩形) -->
     <div id="u281" class="ax_default box_3">
         <div id="u281_div" class=""></div>
         <div id="u281_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; 数据库基础知识汇总（一）</span></p>
+            <p><span>&nbsp;&nbsp; &nbsp; <a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
         </div>
     </div>
-
+    <%
+    } else if (i == 1) {
+    %>
     <!-- Unnamed (矩形) -->
     <div id="u282" class="ax_default box_3">
         <div id="u282_div" class=""></div>
         <div id="u282_text" class="text ">
-            <p><span>&nbsp;&nbsp;&nbsp; Java 教程</span></p>
+            <p><span>&nbsp;&nbsp;&nbsp; <a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
         </div>
     </div>
-
+    <%
+    } else if (i == 2) {
+    %>
     <!-- Unnamed (矩形) -->
     <div id="u283" class="ax_default box_3">
         <div id="u283_div" class=""></div>
         <div id="u283_text" class="text ">
-            <p><span>&nbsp;&nbsp;&nbsp; 数据结构与算法</span></p>
+            <p><span>&nbsp;&nbsp;&nbsp; <a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
         </div>
     </div>
-
+    <%
+    } else if (i == 3) {
+    %>
     <!-- Unnamed (矩形) -->
     <div id="u284" class="ax_default box_3">
         <div id="u284_div" class=""></div>
         <div id="u284_text" class="text ">
-            <p><span>&nbsp;&nbsp;&nbsp; C 语言教程</span></p>
+            <p><span>&nbsp;&nbsp;&nbsp; <a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
         </div>
     </div>
-
+    <%
+    } else if (i == 4) {
+    %>
     <!-- Unnamed (矩形) -->
     <div id="u285" class="ax_default box_3">
         <div id="u285_div" class=""></div>
         <div id="u285_text" class="text ">
-            <p><span>&nbsp;&nbsp;&nbsp; SQL Sever基础教程</span></p>
+            <p><span>&nbsp;&nbsp;&nbsp; <a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
         </div>
     </div>
-
+    <%
+    } else if (i == 5) {
+    %>
     <!-- Unnamed (矩形) -->
     <div id="u286" class="ax_default box_3">
         <div id="u286_div" class=""></div>
         <div id="u286_text" class="text ">
-            <p><span>&nbsp;&nbsp;&nbsp; C语言数据结构基础学习笔记——图</span></p>
+            <p><span>&nbsp;&nbsp;&nbsp; <a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
         </div>
     </div>
-
+    <%
+    } else if (i == 6) {
+    %>
     <!-- Unnamed (矩形) -->
     <div id="u287" class="ax_default box_3">
         <div id="u287_div" class=""></div>
         <div id="u287_text" class="text ">
-            <p><span>&nbsp;&nbsp;&nbsp; C语言入门基础知识点</span></p>
+            <p><span>&nbsp;&nbsp;&nbsp; <a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
         </div>
     </div>
-
+    <%
+    } else if (i == 7) {
+    %>
     <!-- Unnamed (矩形) -->
     <div id="u288" class="ax_default box_3">
         <div id="u288_div" class=""></div>
         <div id="u288_text" class="text ">
-            <p><span>&nbsp;&nbsp;&nbsp; 数据库知识大汇总</span></p>
+            <p><span>&nbsp;&nbsp;&nbsp; <a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
         </div>
     </div>
-
+    <%
+    } else if (i == 8) {
+    %>
     <!-- Unnamed (矩形) -->
     <div id="u289" class="ax_default box_3">
         <div id="u289_div" class=""></div>
         <div id="u289_text" class="text ">
-            <p><span>&nbsp;&nbsp;&nbsp; HTML及HTML5知识笔记</span></p>
+            <p><span>&nbsp;&nbsp;&nbsp; <a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
         </div>
     </div>
-
+    <%
+    } else if (i == 9) {
+    %>
     <!-- Unnamed (矩形) -->
     <div id="u290" class="ax_default box_3">
         <div id="u290_div" class=""></div>
         <div id="u290_text" class="text ">
-            <p><span>&nbsp;&nbsp;&nbsp; Java基础</span></p>
+            <p><span>&nbsp;&nbsp;&nbsp; <a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
         </div>
     </div>
-
-    <!-- Unnamed (矩形) -->
+    <%
+            }
+        }
+    %>
+  <%--  <!-- Unnamed (矩形) -->
     <div id="u291" class="ax_default box_3">
         <div id="u291_div" class=""></div>
         <div id="u291_text" class="text ">
@@ -122,7 +168,7 @@
         <div id="u293_text" class="text ">
             <p><span>&nbsp;&nbsp; HTML5教程</span></p>
         </div>
-    </div>
+    </div>--%>
 </div>
 </body>
 </html>

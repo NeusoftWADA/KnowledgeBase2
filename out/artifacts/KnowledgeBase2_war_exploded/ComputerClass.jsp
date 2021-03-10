@@ -19,7 +19,8 @@
     <link href="files/计算机类/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<div id="base" class="">
+
+    </div>
     <%
         List<Knowledge> knoList = (List) session.getAttribute("计算机类");
         for (int i = 0; i < knoList.size(); i++) {
@@ -109,7 +110,7 @@
         </div>
     </div>
     <%
-    } else if (i == 8) {
+    } else if (i == 7) {
     %>
     <!-- Unnamed (矩形) -->
     <div id="u301" class="ax_default box_3">
@@ -121,24 +122,22 @@
         </div>
     </div>
     <%
-    } else if (i == 9) {
+    } else if (i == 8) {
     %>
-    <!-- Unnamed (矩形) -->
-    <div id="u302" class="ax_default box_3">
-        <div id="u302_div" class=""></div>
-        <div id="u302_text" class="text ">
-            <p><span>&nbsp;&nbsp;&nbsp; <a
-                    style="text-decoration:none"
-                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a></span></p>
-        </div>
-    </div>
+    <div id="base" class="">
+        <!-- Unnamed (矩形) -->
+        <!-- Unnamed (矩形) -->
+        <div id="u302" class="ax_default box_3">
+            <div id="u302_div" class=""></div>
+            <div id="u302_text" class="text ">
+                <p><span>&nbsp;&nbsp;&nbsp; <a
+                        style="text-decoration:none"
+                        href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a></span></p>
+            </div>
 
     <%
-            }
-        }
+    } else if (i == 9) {
     %>
-<%--    <!-- Unnamed (矩形) -->
-
     <!-- Unnamed (矩形) -->
     <div id="u303" class="ax_default box_3">
         <div id="u303_div" class=""></div>
@@ -148,35 +147,29 @@
                     href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a></span></p>
         </div>
     </div>
+    <%
+            }
+        }
+    %>
+
 
     <div id="u304" class="ax_default box_3">
         <div id="u304_div" class=""></div>
         <div id="u304_text" class="text ">
-            <p><span>&nbsp;&nbsp;&nbsp; <a
-                    style="text-decoration:none"
-                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a></span></p>
+            <p><span>&nbsp;&nbsp;&nbsp; 案发当时</span></p>
         </div>
     </div>
 
-    <!-- Unnamed (矩形) -->
-    <div id="u305" class="ax_default box_3">
-        <div id="u305_div" class=""></div>
-        <div id="u305_text" class="text ">
-            <p><span>&nbsp;&nbsp;&nbsp; <a
-                    style="text-decoration:none"
-                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a></span></p>
-        </div>
-    </div>
+
 
     <!-- Unnamed (矩形) -->
     <div id="u306" class="ax_default box_3">
         <div id="u306_div" class=""></div>
         <div id="u306_text" class="text ">
-            <p><span>&nbsp;&nbsp; <a
-                    style="text-decoration:none"
-                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>">&nbsp;&nbsp;  <%=knoList.get(i).getTitle()%></a></span></p>
+            <p><span>&nbsp;&nbsp;放大放大</span></p>
         </div>
-    </div>--%>
+    </div>
+
 </div>
 </body>
 </html>
