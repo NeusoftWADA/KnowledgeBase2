@@ -34,7 +34,15 @@
         <servlet-name>BeginRefreshServlet</servlet-name>
         <servlet-class>controller.BeginRefreshServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoginOutServlet</servlet-name>
+        <servlet-class>controller.LoginOutServlet</servlet-class>
+    </servlet>
 
+    <servlet-mapping>
+        <servlet-name>LoginOutServlet</servlet-name>
+        <url-pattern>/loginout</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>BeginRefreshServlet</servlet-name>
         <url-pattern>/begin/refresh</url-pattern>
