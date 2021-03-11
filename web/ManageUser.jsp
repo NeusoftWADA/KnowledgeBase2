@@ -21,30 +21,27 @@
 <body>
 <div id="base" class="">
 
-    
-    <!-- 查找框 (文本框) -->
-    <div id="u77" class="ax_default text_field" data-label="查找框">
-        <input id="u77_input" type="text" value="请输入用户名或相关词汇"/>
-    </div>
+    <table border="2">
+        <tr>
+            <td>用户编号</td>
+            <td>用户账户</td>
+            <td>注销用户</td>
 
-    <!-- 相关用户列表 (列表框) -->
-    <div id="u78" class="ax_default list_box" data-label="相关用户列表">
-        <select id="u78_input" size="2">
-        </select>
-    </div>
+        </tr>
 
-    <!-- 查找用户 (图片) -->
-    <div id="u79" class="ax_default _图片" data-label="查找用户">
-        <img id="u79_img" class="img " src="images/主页/查询_u1.png"/>
-    </div>
+        <tr style="background-color: green">
 
-    <!-- 注销按钮 (矩形) -->
-    <div id="u80" class="ax_default button" data-label="注销按钮">
-        <div id="u80_div" class=""></div>
-        <div id="u80_text" class="text ">
-            <p><span>注销</span></p>
-        </div>
-    </div>
+        <tr style="background-color: yellow">
+
+
+
+            <td><a href="root/users/del?id=用户编号">删除</a></td>
+
+        </tr>
+
+    </table>
+
+
 
     <!-- 注销成功 (组 合) -->
     <div id="u81" class="ax_default" data-label="注销成功" data-left="-322" data-top="-71" data-width="2722" data-height="1426">
