@@ -372,12 +372,14 @@
         </div>
 <form action="/myweb/logout" method="get">
         <!-- 退出登录 (矩形) -->
-        <div id="u130" class="ax_default _一级标题" data-label="退出登录">
-            <div id="u130_div" class=""></div>
-            <div id="u130_text" class="text ">
-                <p><span>退出</span></p>
-            </div>
-        </div>
+    <div id="u130" class="ax_default primary_button" data-label="退出登录" onclick="this.form.submit()">
+        <%--            <div id="u130_div" class=""></div>--%>
+        <%--            <div id="u130_text" class="text ">--%>
+        <%--                --%>
+        <%--                <p><span>退出</span></p>--%>
+        <%--            </div>--%>
+        <input  type="submit" id="u130_div" class="" value="退出" style="font-size: x-large " >
+    </div>
 </form>
         <!-- 退出登录 (热区) -->
         <div id="u131" class="ax_default" data-label="退出登录">
