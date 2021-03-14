@@ -1,3 +1,5 @@
+<%@ page import="java.util.List" %>
+<%@ page import="entity.User" %>
 <%--
   Created by IntelliJ IDEA.
   User: 齑粉玥
@@ -19,6 +21,7 @@
     <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 </head>
 <body>
+<form action="controller/UserDeleteServlet" method="get">
 <div id="base" class="">
 
     <table border="2">
@@ -26,18 +29,24 @@
             <td>用户编号</td>
             <td>用户账户</td>
             <td>注销用户</td>
+        </tr>
+        <%
+            List list = (List)request.getAttribute("list");
+            for (int i=0;i<list.size();i++){
+                User user =(User) list.get(i);
+        %>
+
+        <td><%=user.getUid()%></td>
+        <td><%=user.getId()%></td>
+
+
+
+        <td><a href="/del?id=<%=user.getUid()%>">删除</a></td>
 
         </tr>
-
-        <tr style="background-color: green">
-
-        <tr style="background-color: yellow">
-
-
-
-            <td><a href="root/users/del?id=用户编号">删除</a></td>
-
-        </tr>
+        <%
+            }
+        %>
 
     </table>
 
@@ -60,5 +69,6 @@
         </div>
     </div>
 </div>
+</form>
 </body>
 </html>

@@ -11,9 +11,9 @@ public class JdbcUtil {
     /*     final String URL="jdbc:mysql://172.17.8.19:3306/myk2";
          final String USERNAME="myk2";
          final String PASSWORD="myk2";*/
-    final String URL = "jdbc:mysql://localhost:3306/web_mkl";
-    final String USERNAME = "root";
-    final String PASSWORD = "root";
+    final String URL = "jdbc:mysql://172.17.8.19:3306/myk2";
+    final String USERNAME = "myk2";
+    final String PASSWORD = "myk2";
     PreparedStatement ps = null;
     Connection con = null;
 

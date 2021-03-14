@@ -1,53 +1,34 @@
 package controller;
-import util.JdbcUtil;
-
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
-@WebServlet("/users/del")
+import controller.GetUserDao;
+
+@WebServlet("/del")
 public class UserDeleteServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //获取id
-        int id=Integer.parseInt(req.getParameter("id"));
-        Connection connection=null;
-        PreparedStatement prsmt=null;
-        String sql;
-        try {
-            //获取连接
-            connection=new JdbcUtil().getCon();
-            //判断：如果获取一个id 就按id对应的数据删除，否则删除全部
-            if(id==-1){
-                sql="delete from user ";
+    private static final long serialVersionUID = 1L;
 
-            }else {
-                sql="delete from user id= "+id;
-            }
-            //执行sql语句
-            prsmt=connection.prepareStatement(sql);
-            prsmt.executeUpdate();
-        }catch (SQLException e){
-            e.printStackTrace();
-        }finally {
-            try {
-                //关闭
-                connection.close();
-                prsmt.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+    public UserDeleteServlet() {
+        super();
+    }
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        }
+        GetUserDao gud=new GetUserDao();
 
-        req.getRequestDispatcher("/user/lst").forward(req, resp);
+        List list=gud.GetPost();
+        request.setAttribute("list",list);
+
+        request.getRequestDispatcher("/ManagerUser.jsp").forward(request, response);
+    }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
     }
 
 }

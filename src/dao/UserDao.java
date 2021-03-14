@@ -4,6 +4,7 @@ package dao;
 import entity.User;
 import util.JdbcUtil;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -119,6 +120,49 @@ public class UserDao {
             util.close(rs);
         }
         return  uid;
+    }
+    //发送增删改语句的方法
+    public int execOther(final String strSQL, final Object[] params){
+        //连接
+        Connection conn=null;
+        PreparedStatement ps=null;
+        ResultSet rs=null;
+        System.out.println("SQL:>"+strSQL);
+        try{
+            //创建statement接口对象
+            ps=conn.prepareStatement(strSQL);
+            //动态为ps对象赋值
+            for(int i=0;i<params.length;i++){
+                ps.setObject(i+1, params[i]);
+            }
+            //使用Statement对象发送SQL语句
+            int affectedRows=ps.executeUpdate();
+            return affectedRows;
+
+
+        } catch(SQLException e){
+            e.printStackTrace();
+            return -1;
+        }
+    }
+
+    //发送查询语句
+    public ResultSet execQuery(final String strSQL,final Object[] params){
+        Connection conn=null;
+        PreparedStatement ps=null;
+        ResultSet rs=null;
+        System.out.println("SQL:>"+strSQL);
+        try{
+            ps=conn.prepareStatement(strSQL);
+            for(int i=0;i<params.length;i++){
+                ps.setObject(i+1, params[i]);
+            }
+            rs=ps.executeQuery();
+            return rs;
+        } catch(SQLException e){
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }
