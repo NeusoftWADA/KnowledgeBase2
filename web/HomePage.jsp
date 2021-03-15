@@ -20,6 +20,24 @@
     <link href="data/styles.css" type="text/css" rel="stylesheet"/><!--固定字体格式-->
     <link href="files/主页/styles.css" type="text/css" rel="stylesheet"/><!--本页的所有元素的颜色大小-->
     <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script type="text/javascript">
+
+        function shang1(){
+            $("#u20_state0") .css("visibility", "visible");
+            $("#u20_state1") .css("visibility", "hidden");
+            $("#u20_state2").css("visibility", "hidden");
+        }
+        function shang2(){
+            $("#u20_state1") .css("visibility", "visible");
+            $("#u20_state0") .css("visibility", "hidden");
+            $("#u20_state2").css("visibility", "hidden");
+        }
+        function shang3(){1
+            $("#u20_state2") .css("visibility", "visible");
+            $("#u20_state1") .css("visibility", "hidden");
+            $("#u20_state0").css("visibility", "hidden");
+        }
+    </script>
 
 </head>
 
@@ -133,7 +151,7 @@
     <a id="u15_text" href="javascript:window.location.href='MathematicsClass.jsp';" style="text-decoration:none;color:#0BA4C6; top: 260px;font-size: 25;left: 585px;" target="iframe1">数 学</a>
     <a id="u16_text" href="javascript:window.location.href='PhysicalClass.jsp';" style="text-decoration:none; color:#0BA4C6; top: 260px;font-size: 25;left: 688px;" target="iframe1">物 理</a>
     <!-- 上标签切换按钮3 (矩形) -->
-    <div id="u17" class="ax_default button" data-label="上标签切换按钮3">
+    <div id="u17" class="ax_default button" data-label="上标签切换按钮3" onclick="shang1()">
         <div id="u17_div" class=""></div>
         <div id="u17_text" class="text ">
             <p><span>3</span></p>
@@ -141,7 +159,7 @@
     </div>
 
     <!-- 上标签切换按钮2 (矩形) -->
-    <div id="u18" class="ax_default button" data-label="上标签切换按钮2">
+    <div id="u18" class="ax_default button" data-label="上标签切换按钮2" onclick="shang2()">
         <div id="u18_div" class=""></div>
         <div id="u18_text" class="text ">
             <p><span>2</span></p>
@@ -149,7 +167,7 @@
     </div>
 
     <!-- 上标签切换按钮1 (矩形) -->
-    <div id="u19" class="ax_default button" data-label="上标签切换按钮1">
+    <div id="u19" class="ax_default button" data-label="上标签切换按钮1" onclick="shang3()">
         <div id="u19_div" class=""></div>
         <div id="u19_text" class="text ">
             <p><span>1</span></p>
@@ -158,28 +176,33 @@
 
     <!-- 上标签 (动态面板) -->
     <div id="u20" class="ax_default" data-label="上标签">
+
+
         <div id="u20_state0" class="panel_state" data-label="State1" style="">
             <div id="u20_state0_content" class="panel_state_content">
-
-                <!-- Unnamed (图片) -->
+                <!-- 图一(图片) -->
                 <div id="u21" class="ax_default image">
                     <img id="u21_img" class="img " src="images/主页/u21.jpg" alt=" "/>
                 </div>
             </div>
         </div>
+
+
         <div id="u20_state1" class="panel_state" data-label="State2" style="visibility: hidden;">
             <div id="u20_state1_content" class="panel_state_content">
 
-                <!-- Unnamed (图片) -->
+                <!-- 图二 (图片) -->
                 <div id="u22" class="ax_default image">
                     <img id="u22_img" class="img " src="images/主页/u22.jpg" alt=" "/>
                 </div>
             </div>
         </div>
+
+
         <div id="u20_state2" class="panel_state" data-label="State3" style="visibility: hidden;">
             <div id="u20_state2_content" class="panel_state_content">
 
-                <!-- Unnamed (图片) -->
+                <!-- 图三(图片) -->
                 <div id="u23" class="ax_default image">
                     <img id="u23_img" class="img " src="images/主页/u23.jpg" alt=" "/>
                 </div>
