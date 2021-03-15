@@ -14,7 +14,7 @@ public class KnowledgeDao {
 
     //按分类取出点赞量比较多的知识点
     public List<Knowledge> knowledges_fetchByType(Integer tid){
-        String sql = "select kid,title,content,attention,share,wid,uid from Knowledge where tid = ? order by attention desc limit 0,10";
+        String sql = "select kid,title,content,attention,share,wid,uid from knowledge where tid = ? order by attention desc limit 0,10";
         String title,content;
         Integer  kid,attention,share,wid,uid;
         ResultSet rs = null;
