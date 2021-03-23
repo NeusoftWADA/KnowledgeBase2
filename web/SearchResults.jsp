@@ -18,9 +18,11 @@
     <link href="files/搜索结果页（样例）/styles.css" type="text/css" rel="stylesheet"/>
     <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 </head>
+<%String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";%>
+<base href="<%=basePath%>">
 <body>
 <div id="base" class="">
-
     <!-- 搜索框 (矩形) -->
     <div id="u233" class="ax_default box_2" data-label="搜索框">
         <div id="u233_div" class=""></div>
@@ -63,9 +65,12 @@
         <img id="u241_img" class="img " src="images/搜索结果页（样例）/底框_u241.png"/>
     </div>
 
+
+
     <!-- 搜索结果 (内联框架) -->
     <div id="u242" class="ax_default" data-label="搜索结果">
-        <iframe id="u242_input" data-label="搜索结果" scrolling="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe id="u242_input" src="data/SearchValue.jsp" data-label="搜索结果" scrolling="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        </iframe>
     </div>
 </div>
 </body>

@@ -8,6 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%String path = request.getContextPath();
+        String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";%>
+    <base href="<%=basePath%>">
     <title>搜索页</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
@@ -111,9 +114,12 @@
     </div>
 
     <!-- 搜索输入 (文本框) -->
-    <div id="u205" class="ax_default text_field" data-label="搜索输入">
-        <label for="u205_input"></label><input id="u205_input" type="text" value=""/>
-    </div>
+    <form action="search" method="get">
+        <div id="u205" class="ax_default text_field" data-label="搜索输入">
+            <label for="u205_input"></label><input id="u205_input" type="text" name="words" value=""/>
+        </div>
+        <input type="submit"/>
+    </form>
 
     <!-- 搜索热区 (热区) -->
     <div id="u206" class="ax_default" onclick="javascript:window.location.href='SearchResults.jsp';" data-label="搜索热区">

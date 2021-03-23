@@ -3,14 +3,45 @@ package dao;
 import entity.Knowledge;
 import util.JdbcUtil;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class KnowledgeDao {
     private JdbcUtil util = new JdbcUtil();
+
+
+    //按关键词取出点赞量比较多的知识点
+    public List<Knowledge> knowledges_fetchByWords(String wname){
+        String sql = "select kid,title,content,attention,share,wid,tid,uid from knowledge where title like'%"+wname+"%' order by attention desc";
+        String title,content;
+        Integer  kid,attention,share,wid,uid,tid;
+        ResultSet rs = null;
+        List<Knowledge> list = new ArrayList<>();
+        PreparedStatement ps = util.createStatement(sql);
+        try {
+            rs = ps.executeQuery(sql);
+            while (rs.next()){
+                kid = rs.getInt("kid");
+                title = rs.getString("title");
+                content = rs.getString("content");
+                attention  = rs.getInt("attention");
+                share = rs.getInt("share");
+                wid = rs.getInt("wid");
+                tid = rs.getInt("tid");
+                uid = rs.getInt("uid");
+                Knowledge knowledge = new Knowledge(kid,title,content,attention,share,tid,wid,uid);
+                list.add(knowledge);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }finally {
+            util.close(rs);
+        }
+        return list;
+    }
+
+
 
     //按分类取出点赞量比较多的知识点
     public List<Knowledge> knowledges_fetchByType(Integer tid){
