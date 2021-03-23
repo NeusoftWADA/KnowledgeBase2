@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import controller.GetUserDao;
+import entity.User;
 
 @WebServlet("/del")
 public class UserDeleteServlet extends HttpServlet {
@@ -22,7 +23,7 @@ public class UserDeleteServlet extends HttpServlet {
 
         GetUserDao gud=new GetUserDao();
 
-        List list=gud.GetPost();
+        List<User> list=gud.GetPost();
         request.setAttribute("list",list);
 
         request.getRequestDispatcher("/ManagerUser.jsp").forward(request, response);

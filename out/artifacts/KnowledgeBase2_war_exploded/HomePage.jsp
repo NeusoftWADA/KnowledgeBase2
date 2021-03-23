@@ -32,7 +32,7 @@
             $("#u20_state0") .css("visibility", "hidden");
             $("#u20_state2").css("visibility", "hidden");
         }
-        function shang3(){
+        function shang3(){1
             $("#u20_state2") .css("visibility", "visible");
             $("#u20_state1") .css("visibility", "hidden");
             $("#u20_state0").css("visibility", "hidden");

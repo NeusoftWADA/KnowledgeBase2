@@ -31,7 +31,7 @@
             <td>注销用户</td>
         </tr>
         <%
-            List list = (List)request.getAttribute("list");
+            List<User> list = (List<User>)request.getAttribute("list");
             for (int i=0;i<list.size();i++){
                 User user =(User) list.get(i);
         %>
