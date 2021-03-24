@@ -94,7 +94,7 @@
     <div id="u76" class="ax_default _一级标题" data-label="管理员帐号">
         <div id="u76_div" class=""></div>
         <div id="u76_text" class="text ">
-            <p><span>管理员帐号：admin001</span></p>
+            <p><span>管理员帐号： ${sessionScope.aid}</span></p>
         </div>
     </div>
 </div>
