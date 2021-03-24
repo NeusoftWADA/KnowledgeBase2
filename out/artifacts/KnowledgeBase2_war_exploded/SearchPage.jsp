@@ -114,7 +114,7 @@
     </div>
 
     <!-- 搜索输入 (文本框) -->
-    <form action="search" method="get">
+    <form action="search" method="get" >
         <div id="u205" class="ax_default text_field" data-label="搜索输入">
             <label for="u205_input"></label><input id="u205_input" type="text" name="words" value=""/>
         </div>

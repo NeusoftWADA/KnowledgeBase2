@@ -16,16 +16,16 @@
 <base href="<%=basePath%>">
 
 <body>
-<%--    <table>
-        <tr>与“${param.words}”关键字相关的知识点有</tr>
-        <c:forEach items="${requestScope.knowledges}" var="knowledge">
-        &lt;%&ndash;style="text-decoration:none"&ndash;%&gt;
+   <table>
+        <tr><td>与“${param.words}”关键字相关的知识点有</td></tr>
+        <c:forEach items="${requestScope.Know}" var="knowledge">
+            <tr>
             <td>
-                <a href="show/Knowledge/Context?title=${knowledge.title}> ${knowledge.title} </a>
+                <a href="show/Knowledge/Context?title=${knowledge.title}"> ${knowledge.title} </a>
             </td>
+            </tr>
         </c:forEach>
-    </table>--%>
-asdffasd
+    </table>
 <jsp:forward page="/SearchResults.jsp"></jsp:forward>
 </body>
 </html>

@@ -19,7 +19,7 @@ public class SearchServlet extends HttpServlet {
         String wname =  words ;
         List<Knowledge> knowledges = new ArrayList<>();
         knowledges = knowledgeDao.knowledges_fetchByWords(wname);
-        req.setAttribute("Knowledges",knowledges);
+        req.setAttribute("Know",knowledges);
         req.getRequestDispatcher("/data/SearchValue.jsp").forward(req,resp);
     }
 
