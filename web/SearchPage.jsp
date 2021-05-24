@@ -124,9 +124,6 @@
         </div>
     </form>
 
-    <!-- 搜索热区 (热区) -->
-    <div id="u206" class="ax_default" onclick="javascript:window.location.href='SearchResults.jsp';" data-label="搜索热区">
-    </div>
 
     <!-- 关键词展示 (热区) -->
     <div id="u207" class="ax_default" data-label="关键词展示">

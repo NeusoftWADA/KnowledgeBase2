@@ -20,7 +20,7 @@ public class SearchServlet extends HttpServlet {
         List<Knowledge> knowledges = new ArrayList<>();
         knowledges = knowledgeDao.knowledges_fetchByWords(wname);
         req.setAttribute("Know",knowledges);
-        req.getRequestDispatcher("/data/SearchValue.jsp").forward(req,resp);
+        req.getRequestDispatcher("/SearchResults.jsp").forward(req,resp);
     }
 
     @Override

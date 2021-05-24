@@ -1,4 +1,5 @@
-<%--
+<%@ page import="entity.Knowledge" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: 齑粉玥
   Date: 2021/2/5
@@ -21,6 +22,7 @@
 <%String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";%>
 <base href="<%=basePath%>">
+
 <body>
 <div id="base" class="">
     <!-- 搜索框 (矩形) -->
@@ -59,102 +61,166 @@
     <!-- 搜索热区 (热区) -->
     <div id="u257" class="ax_default" data-label="搜索热区">
     </div>
-
+    <%
+        List<Knowledge> knoList = (List) request.getAttribute("Know");
+        for (int i = 0; i < knoList.size(); i++) {
+            if (i == 0) {
+    %>
     <!-- Unnamed (矩形) -->
     <div id="u258" class="ax_default box_3">
         <div id="u258_div" class=""></div>
         <div id="u258_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; 数据库基础知识汇总（一）</span></p>
+            <p><span>&nbsp;<a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>"  target="_blank">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
         </div>
     </div>
-
-    <!-- Unnamed (矩形) -->
-    <div id="u259" class="ax_default box_3">
-        <div id="u259_div" class=""></div>
-        <div id="u259_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; 2</span></p>
-        </div>
-    </div>
-
-    <!-- Unnamed (矩形) -->
-    <div id="u260" class="ax_default box_3">
-        <div id="u260_div" class=""></div>
-        <div id="u260_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; 2</span></p>
-        </div>
-    </div>
-
-    <!-- Unnamed (矩形) -->
-    <div id="u261" class="ax_default box_3">
-        <div id="u261_div" class=""></div>
-        <div id="u261_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; 2</span></p>
-        </div>
-    </div>
-
-    <!-- Unnamed (矩形) -->
-    <div id="u262" class="ax_default box_3">
-        <div id="u262_div" class=""></div>
-        <div id="u262_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; 2</span></p>
-        </div>
-    </div>
-
-    <!-- Unnamed (矩形) -->
-    <div id="u263" class="ax_default box_3">
-        <div id="u263_div" class=""></div>
-        <div id="u263_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; 2</span></p>
-        </div>
-    </div>
-
-    <!-- Unnamed (矩形) -->
-    <div id="u264" class="ax_default box_3">
-        <div id="u264_div" class=""></div>
-        <div id="u264_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; 2</span></p>
-        </div>
-    </div>
-
-    <!-- Unnamed (矩形) -->
-    <div id="u265" class="ax_default box_3">
-        <div id="u265_div" class=""></div>
-        <div id="u265_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; 2</span></p>
-        </div>
-    </div>
-
-    <!-- Unnamed (矩形) -->
-    <div id="u266" class="ax_default box_3">
-        <div id="u266_div" class=""></div>
-        <div id="u266_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; 2</span></p>
-        </div>
-    </div>
-
-    <!-- Unnamed (矩形) -->
-    <div id="u267" class="ax_default box_3">
-        <div id="u267_div" class=""></div>
-        <div id="u267_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; 2</span></p>
-        </div>
-    </div>
-
-    <!-- Unnamed (矩形) -->
-    <div id="u268" class="ax_default box_3">
-        <div id="u268_div" class=""></div>
-        <div id="u268_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; 2</span></p>
-        </div>
-    </div>
-
-    <!-- Unnamed (矩形) -->
+    <%
+    } else if (i == 1) {
+    %>
+    <!-- Unnamed (矩形)1-->
     <div id="u269" class="ax_default box_3">
         <div id="u269_div" class=""></div>
         <div id="u269_text" class="text ">
-            <p><span>&nbsp;&nbsp; &nbsp; 2</span></p>
+            <p><span>&nbsp;&nbsp; &nbsp;<a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>"  target="_blank">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
         </div>
     </div>
+
+    <%
+    } else if (i == 2) {
+    %>
+    <!-- Unnamed (矩形) 2-->
+    <div id="u259" class="ax_default box_3">
+        <div id="u259_div" class=""></div>
+        <div id="u259_text" class="text ">
+            <p><span>&nbsp;&nbsp; &nbsp;<a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>"  target="_blank">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
+        </div>
+    </div>
+
+
+    <%
+    } else if (i == 3) {
+    %>
+    <!-- Unnamed (矩形)3-->
+    <div id="u263" class="ax_default box_3">
+        <div id="u263_div" class=""></div>
+        <div id="u263_text" class="text ">
+            <p><span>&nbsp;&nbsp; &nbsp;<a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>"  target="_blank">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
+        </div>
+    </div>
+    <%
+    } else if (i == 4) {
+    %>
+
+
+    <!-- Unnamed (矩形)4-->
+    <div id="u264" class="ax_default box_3">
+        <div id="u264_div" class=""></div>
+        <div id="u264_text" class="text ">
+            <p><span>&nbsp;&nbsp; &nbsp;<a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>"  target="_blank">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
+        </div>
+    </div>
+    <%
+    } else if (i == 5) {
+    %>
+    <!-- Unnamed (矩形)5-->
+    <div id="u265" class="ax_default box_3">
+        <div id="u265_div" class=""></div>
+        <div id="u265_text" class="text ">
+            <p><span>&nbsp;&nbsp; &nbsp;<a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>"  target="_blank">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
+        </div>
+    </div>
+    <%
+    } else if (i == 6) {
+    %>
+
+    <!-- Unnamed (矩形)6 -->
+    <div id="u260" class="ax_default box_3">
+        <div id="u260_div" class=""></div>
+        <div id="u260_text" class="text ">
+            <p><span>&nbsp;&nbsp; &nbsp;<a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>"  target="_blank">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
+        </div>
+    </div>
+    <%
+    } else if (i == 7) {
+    %>
+
+
+    <!-- Unnamed (矩形)7-->
+    <div id="u266" class="ax_default box_3">
+        <div id="u266_div" class=""></div>
+        <div id="u266_text" class="text ">
+            <p><span>&nbsp;&nbsp; &nbsp;<a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>"  target="_blank">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
+        </div>
+    </div>
+
+    <%
+    } else if (i == 8) {
+    %>
+
+    <!-- Unnamed (矩形)8-->
+    <div id="u261" class="ax_default box_3">
+        <div id="u261_div" class=""></div>
+        <div id="u261_text" class="text ">
+            <p><span>&nbsp;&nbsp; &nbsp;<a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>"  target="_blank">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
+        </div>
+    </div>
+    <%
+    } else if (i == 9) {
+    %>
+    <!-- Unnamed (矩形)9-->
+    <div id="u267" class="ax_default box_3">
+        <div id="u267_div" class=""></div>
+        <div id="u267_text" class="text ">
+            <p><span>&nbsp;&nbsp; &nbsp;<a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>"  target="_blank">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
+        </div>
+    </div>
+    <%
+    } else if (i == 10) {
+    %>
+    <!-- Unnamed (矩形)10-->
+    <div id="u262" class="ax_default box_3">
+        <div id="u262_div" class=""></div>
+        <div id="u262_text" class="text ">
+            <p><span>&nbsp;&nbsp; &nbsp;<a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>"  target="_blank">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
+        </div>
+    </div>
+    <%
+    } else if (i == 11) {
+    %>
+    <!-- Unnamed (矩形)11-->
+    <div id="u268" class="ax_default box_3">
+        <div id="u268_div" class=""></div>
+        <div id="u268_text" class="text ">
+            <p><span>&nbsp;&nbsp; &nbsp;<a
+                    style="text-decoration:none"
+                    href="/myweb/show/Knowledge/Context?title=<%=knoList.get(i).getTitle()%>"  target="_blank">&nbsp;&nbsp;<%=knoList.get(i).getTitle()%></a></span></p>
+        </div>
+    </div>
+    <%
+            }
+        }
+    %>
 </div>
 </body>
 </html>
