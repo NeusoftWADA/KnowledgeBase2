@@ -58,7 +58,7 @@
     <div id="u198" class="ax_default label" data-label="关键词1">
         <div id="u198_div" class=""></div>
         <div id="u198_text" class="text ">
-            <p><span>#考研#</span></p>
+            <p><span><a href="search?words=考研">#考研#</a></span></p>
         </div>
     </div>
 
@@ -66,7 +66,7 @@
     <div id="u199" class="ax_default label" data-label="关键词2">
         <div id="u199_div" class=""></div>
         <div id="u199_text" class="text ">
-            <p><span>#笔记#</span></p>
+            <p><span><a href="search?words=笔记">#笔记#</a></span></p>
         </div>
     </div>
 
@@ -74,7 +74,7 @@
     <div id="u200" class="ax_default label" data-label="关键词3">
         <div id="u200_div" class=""></div>
         <div id="u200_text" class="text ">
-            <p><span>#教程#</span></p>
+            <p><span><a href="search?words=教程">#教程#</a></span></p>
         </div>
     </div>
 
@@ -82,7 +82,7 @@
     <div id="u201" class="ax_default label" data-label="关键词4">
         <div id="u201_div" class=""></div>
         <div id="u201_text" class="text ">
-            <p><span>#题目#</span></p>
+            <p><span><a href="search?words=题目">#题目#</a></span></p>
         </div>
     </div>
 
@@ -90,7 +90,7 @@
     <div id="u202" class="ax_default label" data-label="关键词5">
         <div id="u202_div" class=""></div>
         <div id="u202_text" class="text ">
-            <p><span>#易错点#</span></p>
+            <p><span><a href="search?words=易错点">#易错点#</a></span></p>
         </div>
     </div>
 
@@ -98,7 +98,7 @@
     <div id="u203" class="ax_default label" data-label="关键词6">
         <div id="u203_div" class=""></div>
         <div id="u203_text" class="text ">
-            <p><span>#小白#</span></p>
+            <p><span><a href="search?words=小白">#小白#</a></span></p>
         </div>
     </div>
 

@@ -26,8 +26,6 @@ public class BeginRefreshServlet extends HttpServlet {
             session.setAttribute(tname,knowledges);
         }
         request.getRequestDispatcher("/HomePage.jsp").forward(request,response);
-
-
     }
 
     @Override

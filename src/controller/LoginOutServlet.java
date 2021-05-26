@@ -9,7 +9,7 @@ public class LoginOutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(false);
         session.removeAttribute("uid");
-        request.getRequestDispatcher("/HomePage.jsp").forward(request,response);
+        request.getRequestDispatcher("/myweb/begin/refresh").forward(request,response);
     }
 
 }

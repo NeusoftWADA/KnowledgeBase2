@@ -77,7 +77,7 @@
         </div>
     </div>
 
-    <!-- 修改成功 (组 合) -->
+<%--    <!-- 修改成功 (组 合) -->
     <div id="u100" class="ax_default" data-label="修改成功" data-left="0" data-top="56" data-width="2849" data-height="1498">
 
         <!-- 遮蔽 (矩形) -->
@@ -92,7 +92,7 @@
                 <p><span>关键词添加成功</span></p>
             </div>
         </div>
-    </div>
+    </div>--%>
 
     <!-- 导航 (组 合) -->
     <div id="u103" class="ax_default" data-label="导航" data-left="-196" data-top="0" data-width="1740" data-height="56">

@@ -30,10 +30,6 @@
         <div id="u250_div" class=""></div>
     </div>
 
-    <!-- 搜索图标 (图片) -->
-    <div id="u251" class="ax_default _图片" data-label="搜索图标">
-        <img id="u251_img" class="img " src="images/主页/查询_u1.png"/>
-    </div>
 
     <!-- 返回主页 (组 合) -->
     <div id="u252" class="ax_default" data-label="返回主页" data-left="344" data-top="57" data-width="70" data-height="63">
@@ -53,10 +49,21 @@
         </div>
     </div>
 
+    <form action="search" method="get" >
     <!-- 搜索输入 (文本框) -->
-    <div id="u256" class="ax_default text_field" data-label="搜索输入">
-        <input id="u256_input" type="text" value=""/>
-    </div>
+         <div id="u256" class="ax_default text_field" data-label="搜索输入">
+                <input id="u256_input" type="text" name="words"  value=""/>
+         </div>
+
+        <!-- 搜索图标 (图片) -->
+        <div id="u251" class="ax_default _图片" data-label="搜索图标">
+            <input id="u251_img" class="img " type="image" src="images/主页/查询_u1.png" alt="搜索图标 " align=absMiddle border=0 name=search
+                   onclick="this.form.submit()"/>
+        </div>
+
+        <input type="submit"/>
+
+    </form>
 
     <!-- 搜索热区 (热区) -->
     <div id="u257" class="ax_default" data-label="搜索热区">
