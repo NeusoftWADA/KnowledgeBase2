@@ -6,6 +6,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<c:set scope="page" var="flag" value="0"></c:set>
+<c:if test="${requestScope.count eq null}">
+    <c:set scope="page" var="flag" value="-1"></c:set>
+</c:if>
+
 <html>
 <head>
     <title>编写关键词页</title>
@@ -21,15 +27,15 @@
 <body>
 <div id="base" class="">
 
-
+    <form action="/myweb/manger/add" method="post">
     <!-- 关键词名 (文本框) -->
     <div id="u92" class="ax_default text_field" data-label="关键词名">
-        <input id="u92_input" type="text" value="&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 考研"/>
+        <input id="u92_input" type="text" value="&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 考研" name="wname"/>
     </div>
 
     <!-- 添加知识点编号框 (文本框) -->
     <div id="u93" class="ax_default text_field" data-label="添加知识点编号框">
-        <input id="u93_input" type="text" value="输入添加知识点编号"/>
+        <input id="u93_input" type="text" value="输入添加知识点编号" name="kid"/>
     </div>
 
     <!-- Unnamed (形状) -->
@@ -54,12 +60,11 @@
     </div>
 
     <!-- 确认按钮 (矩形) -->
-    <div id="u97" class="ax_default primary_button" data-label="确认按钮">
-        <div id="u97_div" class=""></div>
-        <div id="u97_text" class="text ">
-            <p><span>确认</span></p>
-        </div>
+    <div id="u97" class="ax_default primary_button" data-label="确认按钮"  >
+        <input id="u97_div" class="" onclick="this.form.submit()" style="color:#FFFFFF" value="         确认"></input>
+
     </div>
+
 
     <!-- 添加知识点的标题 (多行文本框) -->
     <div id="u98" class="ax_default text_area" data-label="添加知识点的标题">
@@ -68,7 +73,7 @@
 2022考研数学复习：42句高数知识点的口诀
 </textarea>
     </div>
-
+    </form>
     <!-- 添加错误提示 (矩形) -->
     <div id="u99" class="ax_default label" data-label="添加错误提示">
         <div id="u99_div" class=""></div>
@@ -77,22 +82,24 @@
         </div>
     </div>
 
-<%--    <!-- 修改成功 (组 合) -->
-    <div id="u100" class="ax_default" data-label="修改成功" data-left="0" data-top="56" data-width="2849" data-height="1498">
+<%--<c:if test="${pageScope.flag eq 0 && requestScope.count eq 1}">--%>
+<%--    <!-- 修改成功 (组 合) -->--%>
+<%--    <div id="u100" class="ax_default" data-label="修改成功" data-left="0" data-top="56" data-width="2849" data-height="1498">--%>
 
-        <!-- 遮蔽 (矩形) -->
-        <div id="u101" class="ax_default box_3" data-label="遮蔽">
-            <div id="u101_div" class=""></div>
-        </div>
+<%--        <!-- 遮蔽 (矩形) -->--%>
+<%--        <div id="u101" class="ax_default box_3" data-label="遮蔽">--%>
+<%--            <div id="u101_div" class=""></div>--%>
+<%--        </div>--%>
 
-        <!-- 成功提示 (矩形) -->
-        <div id="u102" class="ax_default box_3" data-label="成功提示">
-            <div id="u102_div" class=""></div>
-            <div id="u102_text" class="text ">
-                <p><span>关键词添加成功</span></p>
-            </div>
-        </div>
-    </div>--%>
+<%--        <!-- 成功提示 (矩形) -->--%>
+<%--        <div id="u102" class="ax_default box_3" data-label="成功提示">--%>
+<%--            <div id="u102_div" class=""></div>--%>
+<%--            <div id="u102_text" class="text ">--%>
+<%--                <p><span>关键词添加成功</span></p>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</c:if>--%>
 
     <!-- 导航 (组 合) -->
     <div id="u103" class="ax_default" data-label="导航" data-left="-196" data-top="0" data-width="1740" data-height="56">

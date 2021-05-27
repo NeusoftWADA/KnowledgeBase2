@@ -50,6 +50,10 @@
         <servlet-name>LoginOutServlet</servlet-name>
         <servlet-class>controller.LoginOutServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>KeyAddServlet</servlet-name>
+        <servlet-class>controller.KeyAddServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>LoginOutServlet</servlet-name>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>UserDeleteServlet</servlet-name>
         <url-pattern>/user/del</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>KeyAddServlet</servlet-name>
+        <url-pattern>/manger/add</url-pattern>
     </servlet-mapping>
 
 

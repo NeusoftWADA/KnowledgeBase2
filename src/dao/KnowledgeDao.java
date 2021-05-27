@@ -1,6 +1,7 @@
 package dao;
 
 import entity.Knowledge;
+import entity.Words;
 import util.JdbcUtil;
 
 import java.sql.*;
@@ -146,6 +147,22 @@ public class KnowledgeDao {
             ps.setString(2, knowledge.getContent());
             ps.setInt(3, knowledge.getTid());
             ps.setInt(4, knowledge.getUid());
+            count=ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            util.close();
+        }
+        return count;
+    }
+    public int Knowledge_change(Words words,String kid){
+        int count=0;
+        String sql="update knowledge set wid=? where kid=?";
+        PreparedStatement ps = util.createStatement(sql);
+        try {
+            ps.setInt(1,words.getWid());
+            ps.setString(2,kid);
             count=ps.executeUpdate();
 
         } catch (SQLException e) {

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class GetUserDao {
+public class GetUserServlet {
 
     public List<User> GetPost(){
 
