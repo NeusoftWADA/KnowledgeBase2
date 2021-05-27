@@ -27,20 +27,74 @@
 <body>
 <div id="base" class="">
 
+<form>
+    <div id="u112" class="ax_default text_field" data-label="关键词名"style="
+    border-width: 0px;
+    position: absolute;
+    left: 579px;
+    top: 72px;
+    width: 215px;
+    height: 39px;
+">
+        <input id="u112_input" type="text" name="wname" style="position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 215px;
+    height: 39px;
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    text-decoration: none;
+    color: #000000;
+    text-align: left;"/>
+    </div>
+
+    <div id="u113" class="ax_default label" style="
+    border-width: 0px;
+    position: absolute;
+    left: 470px;
+    top: 75px;
+    width: 109px;
+    height: 39px;
+    font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;">
+        <div id="u113_div" class=""></div>
+        <div id="u113_text" class="text ">
+            <p><span>新的关键词：</span></p>
+        </div>
+    </div>
+    <!-- Unnamed (形状) -->
+    <div id="u94" class="ax_default icon" style="border-width: 0px;
+    position: absolute;
+    left: 830px;
+    top: 70px;
+    width: 40px;
+    height: 42px;">
+        <img id="u94_img" class="img "  onclick="this.form.submit()" src="images/编写关键词页/u86.png"/>
+    </div>
+    <hr color=#FFFFFF style="
+    margin-top: 120px;
+    width: 500px;
+    height: 1px;
+    margin-left: 430px;
+">
+
+</form>
+
+
+
     <form action="/myweb/manger/add" method="post">
     <!-- 关键词名 (文本框) -->
     <div id="u92" class="ax_default text_field" data-label="关键词名">
-        <input id="u92_input" type="text" value="&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 考研" name="wname"/>
+        <input id="u92_input" type="text"  name="wname"/>
     </div>
 
     <!-- 添加知识点编号框 (文本框) -->
     <div id="u93" class="ax_default text_field" data-label="添加知识点编号框">
         <input id="u93_input" type="text" value="输入添加知识点编号" name="kid"/>
-    </div>
-
-    <!-- Unnamed (形状) -->
-    <div id="u94" class="ax_default icon">
-        <img id="u94_img" class="img " src="images/编写关键词页/u94.png"/>
     </div>
 
     <!-- Unnamed (矩形) -->
@@ -75,7 +129,10 @@
     </div>
     </form>
     <!-- 添加错误提示 (矩形) -->
-    <div id="u99" class="ax_default label" data-label="添加错误提示">
+    <div id="u99" class="ax_default label" data-label="添加错误提示"style="
+    top: 80px;
+    left: 900px;
+">
         <div id="u99_div" class=""></div>
         <div id="u99_text" class="text ">
             <p><span>已有该关键词</span></p>
