@@ -334,14 +334,13 @@ function no2(){
 
 <form action="/myweb/loginout" method="get">
         <!-- 退出登录 (矩形) -->
-    <div id="u130" class="ax_default primary_button" data-label="退出登录" onclick="this.form.submit()">
+    <div id="u130" class="ax_default primary_button" data-label="退出登录">
         <input  type="submit" id="u130_div" class="" value="退出" style="font-size: x-large " >
     </div>
+
 </form>
 
-        <!-- 退出登录 (热区) -->
-        <div id="u131" class="ax_default" data-label="退出登录">
-        </div>
+
 
         <!-- 用户头像 (图片) -->
         <div id="u132" class="ax_default _图片" data-label="用户头像">

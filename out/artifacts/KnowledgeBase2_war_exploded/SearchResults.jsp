@@ -45,7 +45,7 @@
         </div>
 
         <!-- 返回热区 (热区) -->
-        <div id="u255" class="ax_default" data-label="返回热区">
+        <div id="u255" class="ax_default"  onclick="javascript:window.location.href='HomePage.jsp';" data-label="返回热区">
         </div>
     </div>
 
@@ -61,13 +61,11 @@
                    onclick="this.form.submit()"/>
         </div>
 
-        <input type="submit"/>
+
 
     </form>
 
-    <!-- 搜索热区 (热区) -->
-    <div id="u257" class="ax_default" data-label="搜索热区">
-    </div>
+
     <%
         List<Knowledge> knoList = (List) request.getAttribute("Know");
         for (int i = 0; i < knoList.size(); i++) {
