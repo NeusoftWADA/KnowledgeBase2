@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<% String path=request . getContextPath() ;%>
 <c:set scope="page" var="flag" value="0"></c:set>
 <c:if test="${requestScope.count eq null}">
     <c:set scope="page" var="flag" value="-1"></c:set>
@@ -18,10 +19,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
-    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
-    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
-    <link href="files/编写关键词页/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="<%=path%>/resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="<%=path%>/resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="<%=path%>/data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="<%=path%>/files/编写关键词页/styles.css" type="text/css" rel="stylesheet"/>
     <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 </head>
 <body>
@@ -73,7 +74,7 @@
     top: 70px;
     width: 40px;
     height: 42px;">
-        <img id="u94_img" class="img "  onclick="this.form.submit()" src="images/编写关键词页/u86.png"/>
+        <img id="u94_img" class="img "  onclick="this.form.submit()" src="<%=path%>/images/编写关键词页/u86.png"/>
     </div>
     <hr color=#FFFFFF style="
     margin-top: 120px;
@@ -168,17 +169,17 @@
 
         <!-- 主页按钮 (图片) -->
         <div id="u105" class="ax_default _图片" data-label="主页按钮">
-            <img id="u105_img" class="img " src="images/管理员页/主页按钮_u66.png"/>
+            <img id="u105_img" class="img " src="<%=path%>/images/管理员页/主页按钮_u66.png"/>
         </div>
 
         <!-- logo (图片) -->
         <div id="u106" class="ax_default _图片" data-label="logo">
-            <img id="u106_img" class="img " src="images/管理员页/logo_u67.png"/>
+            <img id="u106_img" class="img " src="<%=path%>/images/管理员页/logo_u67.png"/>
         </div>
 
         <!-- 管理员头像 (图片) -->
         <div id="u107" class="ax_default _图片" data-label="管理员头像">
-            <img id="u107_img" class="img " src="images/主页/管理员头像_u60.png"/>
+            <img id="u107_img" class="img " src="<%=path%>/images/主页/管理员头像_u60.png"/>
         </div>
 
         <!-- 退出登录 (矩形) -->
@@ -195,12 +196,12 @@
 
         <!-- logo (图片) -->
         <div id="u110" class="ax_default _图片" data-label="logo">
-            <img id="u110_img" class="img " src="images/管理员页/logo_u71.png"/>
+            <img id="u110_img" class="img " src="<%=path%>/images/管理员页/logo_u71.png"/>
         </div>
 
         <!-- Unnamed (图片) -->
         <div id="u111" class="ax_default _图片">
-            <img id="u111_img" class="img " src="images/主页/查询_u1.png"/>
+            <img id="u111_img" class="img " src="<%=path%>/images/主页/查询_u1.png"/>
         </div>
     </div>
 </div>
