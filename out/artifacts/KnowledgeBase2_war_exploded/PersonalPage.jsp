@@ -36,6 +36,7 @@ function no2(){
     </script>
 </head>
 <body>
+<jsp:include page="Navigation.jsp"></jsp:include>
 <div id="base" class="">
 
     <!-- 边框 (图片) -->
@@ -312,51 +313,6 @@ function no2(){
          data-label="个人信息按钮">
     </div>
 
-    <!-- 导航 (组 合) -->
-    <div id="u126" class="ax_default" data-label="导航" data-left="-122" data-top="0" data-width="1823" data-height="56">
-
-        <!-- Unnamed (矩形) -->
-        <div id="u127" class="ax_default box_2">
-            <div id="u127_div" class=""></div>
-        </div>
-
-        <!-- 主页按钮 (图片) -->
-        <div id="u128" class="ax_default _图片" data-label="主页按钮"
-             onclick="javascript:window.location.href='HomePage.jsp';">
-            <img id="u128_img" class="img " src="images/管理员页/主页按钮_u66.png"/>
-        </div>
-
-        <!-- logo (图片) -->
-        <div id="u129" class="ax_default _图片" data-label="logo">
-            <img id="u129_img" class="img " src="images/管理员页/logo_u67.png"/>
-        </div>
-
-
-<form action="/myweb/loginout" method="get">
-        <!-- 退出登录 (矩形) -->
-    <div id="u130" class="ax_default primary_button" data-label="退出登录">
-        <input  type="submit" id="u130_div" class="" value="退出" style="font-size: x-large " >
-    </div>
-
-</form>
-
-
-
-        <!-- 用户头像 (图片) -->
-        <div id="u132" class="ax_default _图片" data-label="用户头像">
-            <img id="u132_img" class="img " src="images/主页/用户头像_u59.png"/>
-        </div>
-
-        <!-- logo (图片) -->
-        <div id="u133" class="ax_default _图片" data-label="logo">
-            <img id="u133_img" class="img " src="images/管理员页/logo_u71.png"/>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u134" class="ax_default _图片" onclick="javascript:window.location.href='SearchPage.jsp';">
-            <img id="u134_img" class="img " src="images/主页/查询_u1.png"/>
-        </div>
-    </div>
 
     <%--    <!-- 删除成功 (组 合) -->
         <div id="u135" class="ax_default" data-label="录入成功" data-left="-223" data-top="0" data-width="2721" data-height="1488">

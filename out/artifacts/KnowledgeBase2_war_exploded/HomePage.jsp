@@ -199,7 +199,11 @@
     </script>
     <!-- logo (图片) -->
     <div id="u0" class="ax_default _图片" data-label="logo">
-        <img id="u0_img" class="img" src="images/主页/logo_u0.png" alt="logo"/>
+        <img id="u0_img" class="img" src="images/主页/logo_u0.png" alt="logo"style="
+    top: 50px;
+    width: 240px;
+    height: 80px;
+"/>
     </div>
 
     <!-- 查询 (图片) -->
@@ -278,7 +282,7 @@
 
     </div>
 
-    
+
     <!-- 英语类 (梯形) -->
     <div id="u14" class="ax_default flow_shape" data-label="英语类" selectiongroup="类别选项组">
         <img id="u14_img" class="img " src="images/主页/计算机类_u13.png" alt="英语类"/>

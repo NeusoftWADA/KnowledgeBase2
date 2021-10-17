@@ -25,7 +25,7 @@
 </head>
 <body>
 <div id="base" class="">
-
+  <jsp:include page="Navigation.jsp"></jsp:include>
     <!-- 边框 (图片) -->
     <div id="u307" class="ax_default image" data-label="边框">
         <img id="u307_img" class="img " src="images/知识点页/边框_u307.png"/>
@@ -106,56 +106,7 @@
         </div>
     </div>
 
-    <!-- 导航 (组 合) -->
-    <div id="u320" class="ax_default" data-label="导航" data-left="-121" data-top="0" data-width="1786" data-height="56">
 
-        <!-- Unnamed (矩形) -->
-        <div id="u321" class="ax_default box_2" >
-            <div id="u321_div" class=""></div>
-        </div>
-
-        <!-- 主页按钮 (图片) -->
-        <div id="u322" class="ax_default _图片" onclick="javascript:window.location.href='HomePage.jsp';" data-label="主页按钮">
-            <img id="u322_img" class="img " src="images/管理员页/主页按钮_u66.png"/>
-        </div>
-
-        <!-- logo (图片) -->
-        <div id="u323" class="ax_default _图片" data-label="logo">
-            <img id="u323_img" class="img " src="images/管理员页/logo_u67.png"/>
-        </div>
-
-        <!-- 管理员头像 (图片) -->
-        <div id="u324" class="ax_default _图片" data-label="管理员头像">
-            <img id="u324_img" class="img " src="images/主页/管理员头像_u60.png"/>
-        </div>
-
-        <!-- 退出登录 (矩形) -->
-        <div id="u325" class="ax_default _一级标题" data-label="退出登录">
-            <div id="u325_div" class=""></div>
-            <div id="u325_text" class="text ">
-                <p><span>退出</span></p>
-            </div>
-        </div>
-
-        <!-- 退出登录 (热区) -->
-        <div id="u326" class="ax_default" data-label="退出登录">
-        </div>
-
-        <!-- 用户头像 (图片) -->
-        <div id="u327" class="ax_default _图片" data-label="用户头像">
-            <img id="u327_img" class="img " src="images/主页/用户头像_u59.png"/>
-        </div>
-
-        <!-- logo (图片) -->
-        <div id="u328" class="ax_default _图片" data-label="logo">
-            <img id="u328_img" class="img " src="images/管理员页/logo_u71.png"/>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u329" class="ax_default _图片" onclick="javascript:window.location.href='SearchPage.jsp';">
-            <img id="u329_img" class="img " src="images/主页/查询_u1.png"/>
-        </div>
-    </div>
 </div>
 </body>
 </html>

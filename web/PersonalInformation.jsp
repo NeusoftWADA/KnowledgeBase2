@@ -32,6 +32,7 @@
     <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 </head>
 <body>
+<jsp:include page="Navigation.jsp"></jsp:include>
 <div id="base" class="">
 
     <!-- 边框 (图片) -->
@@ -77,51 +78,6 @@
 
 
 
-    <!-- 导航 (组 合) -->
-    <div id="u148" class="ax_default" data-label="导航" data-left="-124" data-top="0" data-width="1867" data-height="56">
-
-        <!-- Unnamed (矩形) -->
-        <div id="u149" class="ax_default box_2" >
-            <div id="u149_div" class=""></div>
-        </div>
-
-        <!-- 主页按钮 (图片) -->
-        <div id="u150" class="ax_default _图片" onclick="javascript:window.location.href='HomePage.jsp';" data-label="主页按钮">
-            <img id="u150_img" class="img " src="images/管理员页/主页按钮_u66.png"/>
-        </div>
-
-        <!-- logo (图片) -->
-        <div id="u151" class="ax_default _图片" data-label="logo">
-            <img id="u151_img" class="img " src="images/管理员页/logo_u67.png"/>
-        </div>
-
-        <!-- 退出登录 (矩形) -->
-        <div id="u152" class="ax_default _一级标题" data-label="退出登录">
-            <div id="u152_div" class=""></div>
-            <div id="u152_text" class="text ">
-                <p><span>退出</span></p>
-            </div>
-        </div>
-
-        <!-- 退出登录 (热区) -->
-        <div id="u153" class="ax_default" data-label="退出登录">
-        </div>
-
-        <!-- 用户头像 (图片) -->
-        <div id="u154" class="ax_default _图片" data-label="用户头像">
-            <img id="u154_img" class="img " src="images/主页/用户头像_u59.png"/>
-        </div>
-
-        <!-- logo (图片) -->
-        <div id="u155" class="ax_default _图片" data-label="logo">
-            <img id="u155_img" class="img " src="images/管理员页/logo_u71.png"/>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u156" class="ax_default _图片"onclick="javascript:window.location.href='SearchPage.jsp';">
-            <img id="u156_img" class="img " src="images/主页/查询_u1.png"/>
-        </div>
-    </div>
 
     <!-- 学校1 (矩形) -->
     <div id="u157" class="ax_default label" data-label="学校1">

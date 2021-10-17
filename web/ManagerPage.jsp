@@ -19,57 +19,12 @@
     <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 </head>
 <body>
+<jsp:include page="Navigation.jsp"></jsp:include>
 <div id="base" class="">
 
     <!-- Unnamed (图片) -->
     <div id="u63" class="ax_default image">
         <img id="u63_img" class="img " src="images/管理员页/u63.png"/>
-    </div>
-
-    <!-- 导航 (组 合) -->
-    <div id="u64" class="ax_default" data-label="导航" data-left="-196" data-top="0" data-width="1740" data-height="56">
-
-        <!-- Unnamed (矩形) -->
-        <div id="u65" class="ax_default box_2" >
-            <div id="u65_div" class=""></div>
-        </div>
-
-        <!-- 主页按钮 (图片) -->
-        <div id="u66" class="ax_default _图片" onclick="javascript:window.location.href='HomePage.jsp';" data-label="主页按钮">
-            <img id="u66_img" class="img " src="images/管理员页/主页按钮_u66.png"/>
-        </div>
-
-        <!-- logo (图片) -->
-        <div id="u67" class="ax_default _图片" data-label="logo">
-            <img id="u67_img" class="img " src="images/管理员页/logo_u67.png"/>
-        </div>
-
-        <!-- 管理员头像 (图片) -->
-        <div id="u68" class="ax_default _图片" data-label="管理员头像">
-            <img id="u68_img" class="img " src="images/主页/管理员头像_u60.png"/>
-        </div>
-
-        <!-- 退出登录 (矩形) -->
-        <div id="u69" class="ax_default _一级标题" data-label="退出登录">
-            <div id="u69_div" class=""></div>
-            <div id="u69_text" class="text ">
-                <p><span>退出</span></p>
-            </div>
-        </div>
-
-        <!-- 退出登录 (热区) -->
-        <div id="u70" class="ax_default" data-label="退出登录">
-        </div>
-
-        <!-- logo (图片) -->
-        <div id="u71" class="ax_default _图片" data-label="logo">
-            <img id="u71_img" class="img " src="images/管理员页/logo_u71.png"/>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u72" class="ax_default _图片" onclick="javascript:window.location.href='SearchPage.jsp';">
-            <img id="u72_img" class="img " src="images/主页/查询_u1.png"/>
-        </div>
     </div>
 
     <!-- 用户管理按钮 (矩形) -->

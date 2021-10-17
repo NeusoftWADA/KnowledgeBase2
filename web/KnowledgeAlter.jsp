@@ -57,57 +57,12 @@
     </script>
 </head>
 <body>
+<jsp:include page="Navigation.jsp"></jsp:include>
 <div id="base" class="">
+  <jsp:include page="Navigation.jsp"></jsp:include>
     <!-- 边框 (图片) -->
     <div id="u167" class="ax_default image" data-label="边框">
         <img id="u167_img" class="img " src="images/知识点录入页/边框_u167.png"/>
-    </div>
-
-    <!-- 导航 (组 合) -->
-    <div id="u168" class="ax_default" data-label="导航" data-left="-158" data-top="0" data-width="1705" data-height="56">
-
-        <!-- Unnamed (矩形) -->
-        <div id="u169" class="ax_default box_2">
-            <div id="u169_div" class=""></div>
-        </div>
-
-        <!-- 主页按钮 (图片) -->
-        <div id="u170" class="ax_default _图片" onclick="javascript:window.location.href='HomePage.jsp';"
-             data-label="主页按钮">
-            <img id="u170_img" class="img " src="images/管理员页/主页按钮_u66.png"/>
-        </div>
-
-        <!-- logo (图片) -->
-        <div id="u171" class="ax_default _图片" data-label="logo">
-            <img id="u171_img" class="img " src="images/管理员页/logo_u67.png"/>
-        </div>
-
-        <!-- 退出登录 (矩形) -->
-        <div id="u172" class="ax_default _一级标题" data-label="退出登录">
-            <div id="u172_div" class=""></div>
-            <div id="u172_text" class="text ">
-                <p><span>退出</span></p>
-            </div>
-        </div>
-
-        <!-- 退出登录 (热区) -->
-        <div id="u173" class="ax_default" data-label="退出登录">
-        </div>
-
-        <!-- 用户头像 (图片) -->
-        <div id="u174" class="ax_default _图片" data-label="用户头像">
-            <img id="u174_img" class="img " src="images/主页/用户头像_u59.png"/>
-        </div>
-
-        <!-- logo (图片) -->
-        <div id="u175" class="ax_default _图片" data-label="logo">
-            <img id="u175_img" class="img " src="images/管理员页/logo_u71.png"/>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u176" class="ax_default _图片" onclick="javascript:window.location.href='SearchPage.jsp';">
-            <img id="u176_img" class="img " src="images/主页/查询_u1.png"/>
-        </div>
     </div>
 
 

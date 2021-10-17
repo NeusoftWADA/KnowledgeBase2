@@ -26,6 +26,7 @@
     <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 </head>
 <body>
+<jsp:include page="Navigation.jsp"></jsp:include>
 <div id="base" class="">
 
 <form>
@@ -158,52 +159,6 @@
 <%--        </div>--%>
 <%--    </div>--%>
 <%--</c:if>--%>
-
-    <!-- 导航 (组 合) -->
-    <div id="u103" class="ax_default" data-label="导航" data-left="-196" data-top="0" data-width="1740" data-height="56">
-
-        <!-- Unnamed (矩形) -->
-        <div id="u104" class="ax_default box_2">
-            <div id="u104_div" class=""></div>
-        </div>
-
-        <!-- 主页按钮 (图片) -->
-        <div id="u105" class="ax_default _图片" data-label="主页按钮">
-            <img id="u105_img" class="img " src="<%=path%>/images/管理员页/主页按钮_u66.png"/>
-        </div>
-
-        <!-- logo (图片) -->
-        <div id="u106" class="ax_default _图片" data-label="logo">
-            <img id="u106_img" class="img " src="<%=path%>/images/管理员页/logo_u67.png"/>
-        </div>
-
-        <!-- 管理员头像 (图片) -->
-        <div id="u107" class="ax_default _图片" data-label="管理员头像">
-            <img id="u107_img" class="img " src="<%=path%>/images/主页/管理员头像_u60.png"/>
-        </div>
-
-        <!-- 退出登录 (矩形) -->
-        <div id="u108" class="ax_default _一级标题" data-label="退出登录">
-            <div id="u108_div" class=""></div>
-            <div id="u108_text" class="text ">
-                <p><span>退出</span></p>
-            </div>
-        </div>
-
-        <!-- 退出登录 (热区) -->
-        <div id="u109" class="ax_default" data-label="退出登录">
-        </div>
-
-        <!-- logo (图片) -->
-        <div id="u110" class="ax_default _图片" data-label="logo">
-            <img id="u110_img" class="img " src="<%=path%>/images/管理员页/logo_u71.png"/>
-        </div>
-
-        <!-- Unnamed (图片) -->
-        <div id="u111" class="ax_default _图片">
-            <img id="u111_img" class="img " src="<%=path%>/images/主页/查询_u1.png"/>
-        </div>
-    </div>
 </div>
 </body>
 </html>
